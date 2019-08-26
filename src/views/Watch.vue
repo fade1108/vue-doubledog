@@ -54,15 +54,15 @@
             <div class="container bg-white" >
 
                 <!--标题栏-->
-                <div class="row">
+                <div class="row border-top">
                     <div class="col-sm-12 p-0">
                         <h1 class="text-center" style="color: #002744">畅销表款</h1>
                         <p class="text-center " style="color: #002744">Elegance is an attitude 优雅态度真我个性</p>
                     </div>
                 </div>
-                <!--按钮栏-->
+                <!--宣传栏-->
                 <div class="row">
-                    <div class="col-sm-12 p-0">
+                    <div class="col-sm-12 p-0 ">
                         <a href="#"><img class="w-100" src="../../public/images/watch-body.jpg" alt=""></a>
                     </div>
                 </div>
@@ -186,10 +186,16 @@
                     </div>
                 </div>
             </div>
+            <watch-world>
+
+            </watch-world>
         </div>
     </main>
 
     </div>
+
+
+
 </template>
 <script>
     export default {
