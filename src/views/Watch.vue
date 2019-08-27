@@ -61,53 +61,102 @@
                     </div>
                 </div>
                 <!--宣传栏-->
-                <div class="row">
+                <div class="row" >
                     <div class="col-sm-12 p-0 ">
-                        <a href="#"><img class="w-100" src="../../public/images/watch-body.jpg" alt=""></a>
+                        <a href="#"><img class="w-100" src="../../public/images/watch-title1.jpg" alt=""></a>
                     </div>
-                </div>
-                <div class="row m-sm-3">
-                    <div class="col-sm-3 border-right">
-                        <a href="#"><img class="w-100" :src="p1.pic"></a>
+
+                  <div class="row m-sm-3">
+                    <div class="col-sm-3 border-right" v-for="(item,i) of others" :key="i">
+                        <a href="#"><img class="w-100" :src="item.pic"></a>
                         <div>
-                            <p class="font" v-text="p1.title"></p>
-                            <p class="font" v-text="p1.details"></p>
-                            <p class="font" v-text="p1.family"></p>
-                            <P class="font1"> ￥{{p1.price.toFixed(2)}}</P>
+                            <p class="font" v-text="item.title"></p>
+                            <p class="font" v-text="item.details"></p>
+                            <p class="font" v-text="item.family"></p>
+                            <P class="font1"> ￥{{item.price.toFixed(2)}}</P>
                             <button type="button" class="btn btn-primary font mx-lg-5 mb-3 " ><a class="text-muted " href="watch_detail_1.html">立即选购</a></button>
                         </div>
                     </div>
-                    <div class="col-sm-3 border-right">
-                        <a href="#"><img class="w-100" :src="p2.pic"></a>
-                        <div>
-                            <p class="font" v-text="p2.title"></p>
-                            <p class="font" v-text="p2.details"></p>
-                            <p class="font" v-text="p2.family"></p>
-                            <P class="font1"> ￥{{p2.price.toFixed(2)}}</P>
-                            <button type="button" class="btn btn-primary font mx-lg-5 mb-3 " >立即选购</button>
-                        </div>
+                  </div>
+                </div>
+                <!--2222222222222222222222222222222-->
+                <div class="row" >
+                    <div class="col-sm-12 p-0 ">
+                        <a href="#"><img class="w-100" src="../../public/images/watch-title1.jpg" alt=""></a>
                     </div>
-                    <div class="col-sm-3 border-right">
-                        <a href="#"><img class="w-100" :src="p3.pic"></a>
-                        <div>
-                            <p class="font" v-text="p3.title"></p>
-                            <p class="font" v-text="p3.details"></p>
-                            <p class="font" v-text="p3.family"></p>
-                            <P class="font1"> ￥{{p3.price.toFixed(2)}}</P>
-                            <button type="button" class="btn btn-primary font mx-lg-5 mb-3 " >立即选购</button>
-                        </div>
-                    </div>
-                    <div class="col-sm-3 ">
-                        <a href="#"><img class="w-100" :src="p4.pic"></a>
-                        <div>
-                            <p class="font" v-text="p4.title"></p>
-                            <p class="font" v-text="p4.details"></p>
-                            <p class="font" v-text="p4.family"></p>
-                            <P class="font1"> ￥{{p4.price.toFixed(2)}}</P>
-                            <button type="button" class="btn btn-primary font mx-lg-5 mb-3 " >立即选购</button>
+
+                    <div class="row m-sm-3">
+                        <div class="col-sm-3 border-right" v-for="(item,i) of others2" :key="i">
+                            <a href="#"><img class="w-100" :src="item.pic"></a>
+                            <div>
+                                <p class="font" v-text="item.title"></p>
+                                <p class="font" v-text="item.details"></p>
+                                <p class="font" v-text="item.family"></p>
+                                <P class="font1"> ￥{{item.price.toFixed(2)}}</P>
+                                <button type="button" class="btn btn-primary font mx-lg-5 mb-3 " ><a class="text-muted " href="watch_detail_1.html">立即选购</a></button>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <!--333333333333333333333333333333333333-->
+                <div class="row" >
+                    <div class="col-sm-12 p-0 ">
+                        <a href="#"><img class="w-100" src="../../public/images/watch-title1.jpg" alt=""></a>
+                    </div>
+
+                    <div class="row m-sm-3">
+                        <div class="col-sm-3 border-right" v-for="(item,i) of others3" :key="i">
+                            <a href="#"><img class="w-100" :src="item.pic"></a>
+                            <div>
+                                <p class="font" v-text="item.title"></p>
+                                <p class="font" v-text="item.details"></p>
+                                <p class="font" v-text="item.family"></p>
+                                <P class="font1"> ￥{{item.price.toFixed(2)}}</P>
+                                <button type="button" class="btn btn-primary font mx-lg-5 mb-3 " ><a class="text-muted " href="watch_detail_1.html">立即选购</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--444444444444444444444444444444444444444-->
+                <div class="row" >
+                    <div class="col-sm-12 p-0 ">
+                        <a href="#"><img class="w-100" src="../../public/images/watch-title1.jpg" alt=""></a>
+                    </div>
+
+                    <div class="row m-sm-3">
+                        <div class="col-sm-3 border-right" v-for="(item,i) of others4" :key="i">
+                            <a href="#"><img class="w-100" :src="item.pic"></a>
+                            <div>
+                                <p class="font" v-text="item.title"></p>
+                                <p class="font" v-text="item.details"></p>
+                                <p class="font" v-text="item.family"></p>
+                                <P class="font1"> ￥{{item.price.toFixed(2)}}</P>
+                                <button type="button" class="btn btn-primary font mx-lg-5 mb-3 " ><a class="text-muted " href="watch_detail_1.html">立即选购</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--55555555555555555555555555555555555555555-->
+                <div class="row" >
+                    <div class="col-sm-12 p-0 ">
+                        <a href="#"><img class="w-100" src="../../public/images/watch-title1.jpg" alt=""></a>
+                    </div>
+
+                    <div class="row m-sm-3">
+                        <div class="col-sm-3 border-right" v-for="(item,i) of others5" :key="i">
+                            <a href="#"><img class="w-100" :src="item.pic"></a>
+                            <div>
+                                <p class="font" v-text="item.title"></p>
+                                <p class="font" v-text="item.details"></p>
+                                <p class="font" v-text="item.family"></p>
+                                <P class="font1"> ￥{{item.price.toFixed(2)}}</P>
+                                <button type="button" class="btn btn-primary font mx-lg-5 mb-3 " ><a class="text-muted " href="watch_detail_1.html">立即选购</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
 
             </div>
 
@@ -201,10 +250,11 @@
     export default {
         data(){
             return {
-                p1:{price:0},
-                p2:{price:0},
-                p3:{price:0},
-                p4:{price:0},
+                others:[],
+                others2:[],
+                others3:[],
+                others4:[],
+                others5:[]
             }
         },
         props:[],
@@ -214,11 +264,11 @@
         created(){
             this.axios.get("http://127.0.0.1:5050/index").then(
                 result=>{
-                    console.log(result.data);
-                    this.p1=result.data[0];
-                    this.p2=result.data[1];
-                    this.p3=result.data[2];
-                    this.p4=result.data[3];
+                    this.others=result.data.slice(0,4);
+                    this.others2=result.data.slice(4,8);
+                    this.others3=result.data.slice(8,12);
+                    this.others4=result.data.slice(12,16);
+                    this.others5=result.data.slice(16,20);
 
                 }
             )
