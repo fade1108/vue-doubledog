@@ -55,6 +55,36 @@
                     </div>
                     <div class="col-sm-7 p-0">
                         <div class="row">
+                            <!--第六行 选项卡导航-->
+                            <div class="col-sm-12 mt-5">
+                                <div id="accordion">
+                                    <div class="card">
+                                        <div class="card-header" id="headingOne">
+                                            <h5 class="mb-0">
+                                                <button class="btn btn-link"  data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                    查看手表详情
+                                                </button>
+                                            </h5>
+                                        </div>
+
+                                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                            <div class="card-body">
+                                                <div style="">
+                                                    <p>表款编码：</p>
+                                                    <p>表壳材质：</p>
+                                                    <p>表带材质：</p>
+                                                    <p>表盘指针：</p>
+                                                    <p>表盘刻度：</p>
+                                                    <p>表盘颜色：</p>
+                                                    <p>机芯类型：</p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
                             <!--第一行-->
                             <div class="col-sm-6 mt-5">
                                 <h1 class="text-center font-weight-bold"> ￥ 19,100.00</h1>
@@ -163,44 +193,7 @@
                                 </div>
 
                             </div>
-                            <!--第六行 选项卡导航-->
-                            <div class="col-sm-12 mt-5">
-                                <ul class="nav nav-tabs">
-                                    <li class="nav-item">
-                                        <a data-toggle="tab" href="#tab1" class="nav-link font">表壳</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a data-toggle="tab" href="#tab2" class="nav-link font">表盘和指针</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a data-toggle="tab" href="#tab3" class="nav-link font">机芯和功能</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a data-toggle="tab" href="#tab4" class="nav-link font">表链</a>
-                                    </li>
-                                </ul>
-                                <!-- 显示的内容 -->
-                                <div class="tab-content ">
-                                    <div id="tab1" class="tab-pane active">
-                                        <h5 class="font-weight-bold ">材质：<d class="font">精钢及陶瓷</d></h5>
-                                        <h5 class="font-weight-bold ">表镜：<d class="font">抗磨损合成蓝宝石镜面，两面带多层防反光涂层</d></h5>
-                                        <h5 class="font-weight-bold ">表背：<d class="font">旋入式</d></h5>
-                                        <h5 class="font-weight-bold ">尺寸：<d class="font">Ø 41.00 mm</d></h5>
-                                        <h5 class="font-weight-bold ">防水性能：<d class="font">防水深度30巴</d></h5>
-                                        <h5 class=" font-weight-bold">形状：<d class="font">圆形</d></h5>
-                                        <h5 class="font-weight-bold ">特色：<d class="font">旋入式表冠</d></h5>
-                                    </div>
-                                    <div id="tab2" class="tab-pane ">
 
-                                    </div>
-                                    <div id="tab3" class="tab-pane ">
-
-                                    </div>
-                                    <div id="tab4" class="tab-pane ">
-
-                                    </div>
-                                </div>
-                            </div>
 
                         </div>
 
@@ -277,6 +270,14 @@
         font-style: normal;/*让倾斜的不倾斜*/
         text-align: center;
         font-size: 50px;
+    }
+    .card-body>p{
+        color: #003150;
+        font-size: 1.5rem;
+    }
+    .card-header .btn-link{
+        color: black;
+        font-weight: bold;
     }
 
 
