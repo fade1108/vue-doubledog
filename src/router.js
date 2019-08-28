@@ -2,16 +2,18 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Index from './views/Index'
 import Watch from './views/Watch'
+import WatchDetails from './views/WatchDetails.vue'
 
 
 Vue.use(Router);
 
 export default new Router({
-  routes: [
-      {path:"/",component:Index},
-      {path:"/index",component:Index},
-      {path:"/watch",component:Watch},
+    routes: [
+        {path:"/",component:Index},
+        {path:"/index",component:Index},
+        {path:"/watch",component:Watch},
+        {path:"/watchdetails/:lid",component:WatchDetails, props:true}
 
 
-  ]
+    ]
 })
