@@ -508,16 +508,16 @@
         line-height: 500px;
         margin: 0;
     }
-    .el-carousel__item:nth-child(1n){
+    .row>.col-lg-6>.el-carousel__item:nth-child(1n){
         background-image: url(../../public/images/watch-pc-2.jpg);
     }
 
-    .el-carousel__item:nth-child(2n) {
+    .row>.col-lg-6>.el-carousel__item:nth-child(2n) {
 
         background-image: url(../../public/images/专属订制.jpg);
     }
 
-    .el-carousel__item:nth-child(3n) {
+    .row>.col-lg-6>.el-carousel__item:nth-child(3n) {
         background-image: url(../../public/images/watch-pc-1.jpg);
     }
 
