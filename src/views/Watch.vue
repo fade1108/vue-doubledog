@@ -82,7 +82,7 @@
                     <!--2222222222222222222222222222222-->
                     <div class="row" >
                         <div class="col-sm-12 p-0 ">
-                            <a href="#"><img class="w-100" src="../../public/images/watch-title1.jpg" alt=""></a>
+                            <a href="#"><img class="w-100" src="../../public/images/watch-title2.jpg" alt=""></a>
                         </div>
 
                         <div class="row m-sm-3">
@@ -101,7 +101,7 @@
                     <!--333333333333333333333333333333333333-->
                     <div class="row" >
                         <div class="col-sm-12 p-0 ">
-                            <a href="#"><img class="w-100" src="../../public/images/watch-title1.jpg" alt=""></a>
+                            <a href="#"><img class="w-100" src="../../public/images/watch-title3.jpg" alt=""></a>
                         </div>
 
                         <div class="row m-sm-3">
@@ -120,7 +120,7 @@
                     <!--444444444444444444444444444444444444444-->
                     <div class="row" >
                         <div class="col-sm-12 p-0 ">
-                            <a href="#"><img class="w-100" src="../../public/images/watch-title1.jpg" alt=""></a>
+                            <a href="#"><img class="w-100" src="../../public/images/watch-title4.jpg" alt=""></a>
                         </div>
 
                         <div class="row m-sm-3">
@@ -139,7 +139,7 @@
                     <!--55555555555555555555555555555555555555555-->
                     <div class="row" >
                         <div class="col-sm-12 p-0 ">
-                            <a href="#"><img class="w-100" src="../../public/images/watch-title1.jpg" alt=""></a>
+                            <a href="#"><img class="w-100" src="../../public/images/watch-title5.jpg" alt=""></a>
                         </div>
 
                         <div class="row m-sm-3">
@@ -234,12 +234,13 @@
                             </a>
                         </div>
                     </div>
-                </div>
-                <watch-world>
 
-                </watch-world>
+                    <watchworld></watchworld>
+                </div>
+
             </div>
         </main>
+
 
     </div>
 
@@ -247,7 +248,9 @@
 
 </template>
 <script>
+    import WatchWorld from '../components/WatchWorld.vue'
     export default {
+
         data(){
             return {
                 others:[],
@@ -262,7 +265,7 @@
         watch:{},
         computed:{},
         created(){
-            this.axios.get("http://127.0.0.1:5050/index").then(
+            this.axios.get("watch").then(
                 result=>{
                     this.others=result.data.slice(0,4);
                     this.others2=result.data.slice(4,8);
@@ -272,9 +275,13 @@
 
                 }
             )
+        },
+        components:{
+            "watchworld":WatchWorld,
         }
 
     }
+
 
 </script>
 <style scoped>

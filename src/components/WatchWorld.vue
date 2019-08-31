@@ -1,6 +1,6 @@
 <template>
 
-    <footer>
+  <!--  <footer>-->
         <div class="container border-top bg-white">
             <div class="row">
                 <h1  class="m-5 font-weight-bold ">浪琴世界</h1>
@@ -55,12 +55,14 @@
                     </ul>
                 </div>
             </div>
+      </div>
 
-        </div>
-    </footer>
+   <!-- </footer>-->
 </template>
 <script>
+    props:{
 
+    }
 </script>
 <style scoped>
     .border-top>.row>.m-5{

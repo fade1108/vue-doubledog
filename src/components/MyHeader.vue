@@ -2,58 +2,39 @@
 <header>
     <div id="body">
     <div class="wrapper" id="wrapper">
-
-        <div class="bg-white"></div>
-
-        <header class="header">
+        <header class="header" style="height: 100px">
             <div class="container">
                 <h1 class="logo"><a href="#"></a></h1>
                 <ul class="nav">
                     <li class="nav-item">
-                        <a href="#">DoubleDog商城</a>
+                        <a href="javascript:;" style="font-family: Jokerman">DoubleDog</a>
                     </li>
                     <li class="nav-item" data-subNav="nav_iphone">
-                        <a href="#">综合购物商城</a>
+                        <a href="javascript:;">综合购物商城</a>
                     </li>
                     <li class="nav-item" data-subNav="nav_subIphone">
-                        <a href="#">浪琴手表</a>
+                        <a href="javascript:;">浪琴手表</a>
                     </li>
                     <li class="nav-item" data-subNav="nav_voice">
-                        <a href="#">鞋类</a>
+                        <a href="javascript:;">鞋类</a>
                     </li>
                     <li class="nav-item" data-subNav="nav_parts">
-                        <a href="#">书籍</a>
+                        <a href="javascript:;">书籍</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#">暴龙眼镜</a>
+                        <a href="javascript:;">暴龙眼镜</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#">包类</a>
+                        <a href="javascript:;">包类</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#">项链</a>
+                        <a href="javascript:;">项链</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#">社区</a>
+                        <a href="javascript:;">社区</a>
                     </li>
                 </ul>
-                <!--<div class="user">
-                    <div class="user-hover"></div>
-                    <div class="user-img">
-                        <img src="images/user.png" alt="#">
-                        <span class="arrow-bg"></span>
-                        <span class="arrow-font"></span>
-                    </div>
-                    <div class="user-info">
-                        <ul>
-                            <li class="login"><a href="#">立即登录</a></li>
-                            <li class="register">没有账号?<a href="#">立即注册</a></li>
-                            <li><a href="#">我的购物车</a></li>
-                            <li><a href="#">我的订单</a></li>
-                            <li><a href="#">M码通道</a></li>
-                        </ul>
-                    </div>
-                </div>-->
+
             </div>
         </header>
 
@@ -61,93 +42,93 @@
             <div class="sub-nav__wrap" data-link="nav_iphone">
                 <a href="#">
                     <img src="images/cont/1-1.png" alt="#">
-                    <span>PRO 6 Plus</span>
+
                 </a>
                 <a href="#">
                     <img src="images/cont/1-2.png" alt="#">
-                    <span>PRO 6s</span>
+
                 </a>
                 <a href="#">
                     <img src="images/cont/1-3.png" alt="#">
-                    <span>MX6</span>
+
                 </a>
                 <a href="#">
                     <img src="images/cont/1-4.png" alt="#">
-                    <span>PRO6</span>
+
                 </a>
                 <a href="#">
                     <img src="images/cont/1-5.png" alt="#">
-                    <span>PRO5</span>
+
                 </a>
             </div>
             <div class="sub-nav__wrap" data-link="nav_subIphone">
                 <a href="#">
                     <img src="images/cont/2-1.png" alt="#">
-                    <span>MZUI Note5</span>
+
                 </a>
                 <a href="#">
                     <img src="images/cont/2-2.png" alt="#">
-                    <span>PRO 6s</span>
+
                 </a>
                 <a href="#">
                     <img src="images/cont/2-3.png" alt="#">
-                    <span>MX6</span>
+
                 </a>
                 <a href="#">
                     <img src="images/cont/2-4.png" alt="#">
-                    <span>PRO6</span>
+
                 </a>
                 <a href="#">
                     <img src="images/cont/2-5.png" alt="#">
-                    <span>PRO5</span>
+
                 </a>
                 <a href="#">
                     <img src="images/cont/2-6.png" alt="#">
-                    <span>PRO5</span>
+
                 </a>
                 <a href="#">
                     <img src="images/cont/2-7.png" alt="#">
-                    <span>PRO5</span>
+
                 </a>
             </div>
             <div class="sub-nav__wrap" data-link="nav_voice">
                 <a href="#">
                     <img src="images/cont/3-1.png" alt="#">
-                    <span>PRO 6 Plus</span>
+
                 </a>
                 <a href="#">
                     <img src="images/cont/3-2.png" alt="#">
-                    <span>PRO 6s</span>
+
                 </a>
                 <a href="#">
                     <img src="images/cont/3-3.png" alt="#">
-                    <span>MX6</span>
+
                 </a>
             </div>
             <div class="sub-nav__wrap" data-link="nav_parts">
                 <a href="#">
                     <img src="images/cont/4-1.png" alt="#">
-                    <span>PRO 6 Plus</span>
+
                 </a>
                 <a href="#">
                     <img src="images/cont/4-2.png" alt="#">
-                    <span>PRO 6s</span>
+
                 </a>
                 <a href="#">
                     <img src="images/cont/4-3.png" alt="#">
-                    <span>MX6</span>
+
                 </a>
                 <a href="#">
                     <img src="images/cont/4-4.png" alt="#">
-                    <span>PRO6</span>
+
                 </a>
                 <a href="#">
                     <img src="images/cont/4-5.png" alt="#">
-                    <span>PRO5</span>
+
                 </a>
                 <a href="#">
                     <img src="images/cont/4-6.png" alt="#">
-                    <span>PRO5</span>
+
                 </a>
             </div>
         </div>
@@ -165,7 +146,15 @@ export default {
 
 </script>
 <style scoped>
-    #body { line-height: 1; font-size: 14px; font-family: "Microsoft Yahei"; color: #333; background-color: #2D2D2D; }
+    #body { line-height: 1; font-size: 14px; font-family: "Microsoft Yahei"; color: #333; background-color: #ffffff; }
+    .header{
+        /*background-color: #2D2D2D;*/
+        background: -webkit-linear-gradient(#fbc2eb, #a6c1ee); /* Safari 5.1 - 6.0 */
+        background: -o-linear-gradient(#fbc2eb, #a6c1ee); /* Opera 11.1 - 12.0 */
+        background: -moz-linear-gradient(#fbc2eb, #a6c1ee); /* Firefox 3.6 - 15 */
+        background: linear-gradient(#fbc2eb, #a6c1ee); /* 标准的语法（必须放在最后） */
+
+    }
     ul, ol {
         list-style: none;
     }
@@ -173,6 +162,7 @@ export default {
         display: block;
         color: #333;
         text-decoration: none;
+        margin: 0;
     }
     #body>input, button {
         padding: 0;
@@ -186,7 +176,7 @@ export default {
     #body>.wrapper {
         position: relative;
         width: 100%;
-        height: 155px;
+        height: 100px;
         overflow: hidden;
     }
 
@@ -234,6 +224,9 @@ export default {
         padding: 20px 20px 0;
         height: 42px;
         line-height: 42px;
+        text-decoration: none;
+        font-size: 18px;
+        font-family: 宋体;
     }
     .nav-item a:hover {
         color: rgb(49, 165, 231);
@@ -243,7 +236,7 @@ export default {
         overflow: hidden;
         position: absolute;
         left: 0;
-        top: 62px;
+        top:35px;
         z-index: 999;
         width: 100%;
         background-color: #fff;
@@ -269,7 +262,8 @@ export default {
     .sub-nav a {
         float: left;
         width: 140px;
-        padding-top: 14px;
+        padding-top: 0px;
+        margin: 0px;
         text-align: center;
         color: #666;
     }
@@ -278,7 +272,7 @@ export default {
     }
     .sub-nav a img {
         display: inline-block;
-        height: 80px;
+        height: 60px;
     }
     .sub-nav a span {
         display: block;
@@ -386,6 +380,7 @@ export default {
         left: 0;
         top: 0;
         overflow: hidden;
+        height: 100px;
     }
 
     .slider {
@@ -451,7 +446,7 @@ export default {
         background: url(../../public/images/logo_blue.png) no-repeat !important;
     }
     .theme-nav .nav-item a {
-        color: #333;
+        color: #ffffff;
     }
     .theme-nav .nav-item a:hover {
         color: rgb(49, 165, 231);
