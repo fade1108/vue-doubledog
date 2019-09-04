@@ -4,20 +4,27 @@
             <el-row>
                 <el-col :span="24"><my-header></my-header></el-col>
                 <el-col :span="24">
-                    <el-carousel indicator-position="outside" height="700px">
-                        <el-carousel-item v-for="item in 4" :key="item">
-                            <h3>{{ item }}</h3>
-                        </el-carousel-item>
-                    </el-carousel>
+                    <el-carousel :interval="4000" type="card" height="400px">
+                                <el-carousel-item v-for="item in imagesbox" :key="item.id">
+                                   <img :src="item.idView" class="image" style="width: 100% !important;">
+                                </el-carousel-item>
+                              </el-carousel>
                 </el-col>
             </el-row>
         </el-header>
-        <el-main>
+        <div>
             <el-row :gutter="10">
-                <el-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1">
-                    123
+                <el-col :xs="16" :sm="18" :md="20" :lg="21" style="padding-left: 130px !important;">
+                    <img src="../../src/assets/imgss/index_1.jpg" >
                 </el-col>
-                <el-col :xs="4" :sm="6" :md="8" :lg="9" :xl="11">
+
+                <el-col :xs="8" :sm="6" :md="4" :lg="3">
+
+                </el-col>
+            </el-row>
+
+            <el-row :gutter="10">
+                <el-col :xs="16" :sm="18" :md="20" :lg="21" >
 
                     <div class="bbq">
 
@@ -30,81 +37,40 @@
                             <h5>{{item.price}}</h5>
                             <p>usmod tempor incididunt ut labore et dolore magna aliqua.</p>
                             <div class="social-touch">
-                                <a class="fb-touch" href="#">
+                                <div class="fb-touch">
                                     <el-button type="danger">立即购买</el-button>
-                                </a>
-                                <a class="tweet-touch" href="#">
+                                </div>
+                                <div class="tweet-touch" >
 
-                                </a>
-                                <a class="linkedin-touch" href="#">
-                                    <el-button type="warning">加入购物车</el-button>
-                                </a>
-                            </div>
-                        </div>
-                      </div>
-
-
-
-
-                    </div>
-
-                </el-col>
-
-                <el-col :xs="4" :sm="6" :md="8" :lg="9" :xl="11">
-
-                    <div class="bbq">
-
-                        <div v-show="show2" v-for="(item,i) of list" :key="i" class="single-member effect-3">
-                            <div class="member-image">
-                                <img :src="'http://127.0.0.1:3000/'+item.img_url" alt="Member">
-                            </div>
-                            <div class="member-info">
-                                <h3>{{item.title}}</h3>
-                                <h5>{{item.price}}</h5>
-                                <p>usmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                <div class="social-touch">
-                                    <a class="fb-touch" href="#">
-                                        <el-button type="danger">立即购买</el-button>
-                                    </a>
-                                    <a class="tweet-touch" href="#">
-
-                                    </a>
-                                    <a class="linkedin-touch" href="#">
-                                        <el-button type="warning">加入购物车</el-button>
-                                    </a>
+                                </div>
+                                <div class="linkedin-touch">
+                                    <el-button @click="addcart" :data-lid="item.lid" :data-price="item.price" :data-title="item.title"  type="warning">加入购物车</el-button>
                                 </div>
                             </div>
                         </div>
-
-
+                      </div>
                     </div>
 
-
                 </el-col>
 
-                <el-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1">
-                    123
+                <el-col :xs="8" :sm="6" :md="4" :lg="3">
+                    <el-button type="primary" @click="jumpCart" plain>我的购物车</el-button>
                 </el-col>
-                <el-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1"></el-col>
-                <el-col :xs="4" :sm="6" :md="8" :lg="9" :xl="11">
-                    <el-button @click="loadMore" type="info" plain>加载更多</el-button></el-col>
-                <el-col :xs="4" :sm="6" :md="8" :lg="9" :xl="11">
-                    <el-button @click="loadMore" type="info" plain>加载更多</el-button></el-col>
-                <el-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1"></el-col>
+            </el-row>
+            <el-row :gutter="10">
+                <el-col :xs="16" :sm="18" :md="20" :lg="21">
+                    <el-button @click="loadMore" type="info" plain>加载更多</el-button>
+                </el-col>
+
+                <el-col :xs="8" :sm="6" :md="4" :lg="3">
+
+                </el-col>
             </el-row>
 
 
-        </el-main>
-
-
-        <div>
-
-
-
-
-
-
         </div>
+
+
 
     </div>
 
@@ -118,7 +84,10 @@
           return{
               list:[],//保存玩服务器返回商品列表
               pno:0,//当前页码
-              show2: true
+              show2: true,
+              imagesbox:[{id:0,idView:require("../assets/imgss/dg_lb_1.jpg")},{id:1,idView:require("../assets/imgss/dg_lb_1.jpg")},
+
+                  {id:2,idView:require("../assets/imgss/dg_lb_1.jpg")}]
           }
         },
         created(){
@@ -143,6 +112,44 @@
                 })
 
             },
+            addcart(event){
+                //1.获取购物车中数据lid,lname,price
+                var lid = event.target.dataset.lid;
+                var title = event.target.dataset.title;
+                var price = event.target.dataset.price;
+                //2.创建url
+                var url = "addcart"
+                var obj = {lid:lid, title:title, price:price};
+                console.log(obj);
+                //3.发送ajax请求获取数据
+                this.axios.get(url,{params:obj}).then(res => {
+                    if(res.data.code == -1){
+                        //显示一个提示框
+                        this.$alert("请登录","消息").then(res=>{
+                            //跳转登录组件
+                            this.$router.push({path: '/login'});
+                        });
+
+                    }else if(res.data.code == -2){
+                        this.$notify({
+                            title: '添加失败',
+                            message: '这是一条警告的提示消息',
+                            type: 'warning'
+                        });
+                    }else {
+                        this.$notify({
+                            title: '添加成功',
+                            message: '这是一条成功的提示消息',
+                            type: 'success'
+                        });
+                    }
+
+                })
+            },
+            jumpCart(){
+                this.$router.push({path: '/cart'});
+            }
+
         }
 
     }
@@ -167,13 +174,13 @@
     .bbq{ font-family: Lato,'Open Sans', sans-sarif; font-size: 16px; background-color: #1F1F1F; }
     .bbq{margin: 0; padding: 0; box-sizing: border-box;}
     /*= common css to all effects =*/
-    .single-member{width: 280px; float: left; margin: 30px 2.5%; background-color: #fff; text-align: center; position: relative;}
+    .single-member{width: 280px; float: left; margin: 43px 25px 26px 110px; background-color: #fff; text-align: center; position: relative;}
     .member-image img{max-width: 100%; vertical-align: middle;}
     h3 {font-size: 24px; font-weight: normal; margin: 10px 0 0; text-transform: uppercase;}
     h5 {font-size: 16px; font-weight: 300; margin: 0 0 15px; line-height: 22px;}
     p {font-size: 14px; font-weight: 300; line-height: 22px; padding: 0 30px; margin-bottom: 10px;}
-    .social-touch a{display: inline-block; width: 50px; height: 26px; vertical-align: middle; margin: 0 2px; /*background-image: url(../assets/imgss/social-icons.png);*/ background-repeat: no-repeat; opacity: 0.7; transition: 0.3s;}
-    .social-touch a:hover{opacity: 1; transition: 0.3s;}
+    .social-touch div{display: inline-block; width: 50px; height: 26px; vertical-align: middle; margin: 0 2px; /*background-image: url(../assets/imgss/social-icons.png);*/ background-repeat: no-repeat; opacity: 0.7; transition: 0.3s;}
+    .social-touch div:hover{opacity: 1; transition: 0.3s;}
     .fb-touch{background-position: 0 0; margin-left: -50px!important;}
     .tweet-touch{background-position: -35px 0;}
     .linkedin-touch{background-position: -71px 0;}
@@ -202,7 +209,7 @@
     /*= effect-2 css end =*/
 
     /*= effect-3 css =*/
-    .effect-3{max-height: 302px; min-height: 302px; overflow: hidden;}
+    .effect-3{max-height: 302px; min-height: 302px; overflow: hidden; }
     .effect-3 h3{padding-top: 7px; line-height: 33px;}
     .effect-3 .member-image{border-bottom: 5px solid #e5642b; transition: 0.4s; height: 212px; width: 100%; display: inline-block; float: none; vertical-align: middle;}
     .effect-3 .member-info{transition: 0.4s;}

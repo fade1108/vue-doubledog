@@ -58,7 +58,7 @@
                                     <mt-field label="密码" placeholder="请输入密码" v-model="upwd"></mt-field>
 
 
-                                    <a href="#">忘记密码？</a>
+                                    <a href="javascript:;">忘记密码？</a>
                                     <mt-button class="btn btn-danger" size="large" @click="login">登录</mt-button>
                                 </div>
                             </div>
@@ -155,7 +155,7 @@
 
                     } else {
                         //成功跳转 到你想到的路径
-                        this.$router.push("/watch")
+                        this.$router.push("/indexdg")
                     }
                 })
 

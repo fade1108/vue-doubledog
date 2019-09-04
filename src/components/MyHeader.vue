@@ -40,94 +40,94 @@
 
         <div class="sub-nav">
             <div class="sub-nav__wrap" data-link="nav_iphone">
-                <a href="#">
-                    <img src="images/cont/1-1.png" alt="#">
+                <a href="javascript:;">
+                    <img src="../../public/images/cont/1-1.png" alt="#">
 
                 </a>
-                <a href="#">
-                    <img src="images/cont/1-2.png" alt="#">
+                <a href="javascript:;">
+                    <img src="../../public/images/cont/1-2.png" alt="#">
 
                 </a>
-                <a href="#">
-                    <img src="images/cont/1-3.png" alt="#">
+                <a href="javascript:;">
+                    <img src="../../public/images/cont/1-3.png" alt="#">
 
                 </a>
-                <a href="#">
-                    <img src="images/cont/1-4.png" alt="#">
+                <a href="javascript:;">
+                    <img src="../../public/images/cont/1-4.png" alt="#">
 
                 </a>
-                <a href="#">
-                    <img src="images/cont/1-5.png" alt="#">
+                <a href="javascript:;">
+                    <img src="../../public/images/cont/1-5.png" alt="#">
 
                 </a>
             </div>
             <div class="sub-nav__wrap" data-link="nav_subIphone">
                 <a href="#">
-                    <img src="images/cont/2-1.png" alt="#">
+                    <img src="../../public/images/cont/2-1.png" alt="#">
 
                 </a>
                 <a href="#">
-                    <img src="images/cont/2-2.png" alt="#">
+                    <img src="../../public/images/cont/2-2.png" alt="#">
 
                 </a>
                 <a href="#">
-                    <img src="images/cont/2-3.png" alt="#">
+                    <img src="../../public/images/cont/2-3.png" alt="#">
 
                 </a>
                 <a href="#">
-                    <img src="images/cont/2-4.png" alt="#">
+                    <img src="../../public/images/cont/2-4.png" alt="#">
 
                 </a>
                 <a href="#">
-                    <img src="images/cont/2-5.png" alt="#">
+                    <img src="../../public/images/cont/2-5.png" alt="#">
 
                 </a>
                 <a href="#">
-                    <img src="images/cont/2-6.png" alt="#">
+                    <img src="../../public/images/cont/2-6.png" alt="#">
 
                 </a>
                 <a href="#">
-                    <img src="images/cont/2-7.png" alt="#">
+                    <img src="../../public/images/cont/2-7.png" alt="#">
 
                 </a>
             </div>
             <div class="sub-nav__wrap" data-link="nav_voice">
                 <a href="#">
-                    <img src="images/cont/3-1.png" alt="#">
+                    <img src="../../public/images/cont/3-1.png" alt="#">
 
                 </a>
                 <a href="#">
-                    <img src="images/cont/3-2.png" alt="#">
+                    <img src="../../public/images/cont/3-2.png" alt="#">
 
                 </a>
                 <a href="#">
-                    <img src="images/cont/3-3.png" alt="#">
+                    <img src="../../public/images/cont/3-3.png" alt="#">
 
                 </a>
             </div>
             <div class="sub-nav__wrap" data-link="nav_parts">
                 <a href="#">
-                    <img src="images/cont/4-1.png" alt="#">
+                    <img src="../../public/images/cont/4-1.png" alt="#">
 
                 </a>
                 <a href="#">
-                    <img src="images/cont/4-2.png" alt="#">
+                    <img src="../../public/images/cont/4-2.png" alt="#">
 
                 </a>
                 <a href="#">
-                    <img src="images/cont/4-3.png" alt="#">
+                    <img src="../../public/images/cont/4-3.png" alt="#">
 
                 </a>
                 <a href="#">
-                    <img src="images/cont/4-4.png" alt="#">
+                    <img src="../../public/images/cont/4-4.png" alt="#">
 
                 </a>
                 <a href="#">
-                    <img src="images/cont/4-5.png" alt="#">
+                    <img src="../../public/images/cont/4-5.png" alt="#">
 
                 </a>
                 <a href="#">
-                    <img src="images/cont/4-6.png" alt="#">
+                    <img src="../../public/images/cont/4-6.png" alt="#">
 
                 </a>
             </div>
@@ -149,10 +149,10 @@ export default {
     #body { line-height: 1; font-size: 14px; font-family: "Microsoft Yahei"; color: #333; background-color: #ffffff; }
     .header{
         /*background-color: #2D2D2D;*/
-        background: -webkit-linear-gradient(#fbc2eb, #a6c1ee); /* Safari 5.1 - 6.0 */
-        background: -o-linear-gradient(#fbc2eb, #a6c1ee); /* Opera 11.1 - 12.0 */
-        background: -moz-linear-gradient(#fbc2eb, #a6c1ee); /* Firefox 3.6 - 15 */
-        background: linear-gradient(#fbc2eb, #a6c1ee); /* 标准的语法（必须放在最后） */
+        background: -webkit-linear-gradient(#dcddde, #dcddde); /* Safari 5.1 - 6.0 */
+        background: -o-linear-gradient(#dcddde, #dcddde); /* Opera 11.1 - 12.0 */
+        background: -moz-linear-gradient(#dcddde, #dcddde); /* Firefox 3.6 - 15 */
+        background: linear-gradient(#dcddde, #dcddde); /* 标准的语法（必须放在最后） */
 
     }
     ul, ol {
@@ -212,7 +212,8 @@ export default {
         background: url(../../public/images/logo_blue.png) no-repeat;
     }
 
-    .nav {
+    .container>.nav {
+        color: black;
         float: left;
         margin-left: 256px;
     }
@@ -227,6 +228,8 @@ export default {
         text-decoration: none;
         font-size: 18px;
         font-family: 宋体;
+        color: black !important;
+        font-weight: bold;
     }
     .nav-item a:hover {
         color: rgb(49, 165, 231);
