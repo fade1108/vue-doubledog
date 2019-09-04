@@ -7,6 +7,8 @@ import Login from "./views/Login.vue"
 import Cart from "./views/newCart.vue"
 import Shoes from "./views/shoes.vue"
 import Shoes_ss from "./views/shoes_ss.vue"
+import glass_index from "./views/glass.vue"
+import glass_details from "./views/glass_detail.vue"
 
 Vue.use(Router);
 
@@ -18,7 +20,9 @@ export default new Router({
         {path:"/login",component:Login},
         {path:"/cart",component:Cart},
         {path:"/shoes",component:Shoes},
-        {path:"/shoess",component:Shoes_ss}
+        {path:"/shoess",component:Shoes_ss},
+        {path:"/glass",component:glass_index},
+        {path:"/glassls",component:glass_details}
 
 
     ]
