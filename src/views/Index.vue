@@ -67,8 +67,10 @@
                 </el-col>
             </el-row>
 
-
+            <foot></foot>
         </div>
+
+
 
 
 
@@ -77,9 +79,15 @@
 </template>
 <script>
     import ElCol from "element-ui/packages/col/src/col";
+    import FooTer from "./footer.vue"
 
     export default {
-        components: {ElCol},
+
+        components: {
+            "foot":FooTer,
+            ElCol,
+
+        },
         data(){
           return{
               list:[],//保存玩服务器返回商品列表
