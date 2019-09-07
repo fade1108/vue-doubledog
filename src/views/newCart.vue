@@ -80,7 +80,7 @@
                             <div class="leftText">
                                 <el-checkbox v-model="checked" size="medium" :border="true"></el-checkbox>
                                 <img src="../../src/assets/imgss/0ea0.jpg">
-                                <div class="lname ml-5">{{item.title}}</div>
+                                <div class="lname ml-5">{{item.lname}}</div>
                             </div>
                         </el-col>
                         <el-col :span="3" >
