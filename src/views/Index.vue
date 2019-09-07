@@ -67,9 +67,11 @@
                 </el-col>
             </el-row>
 
-
+            <foot></foot>
         </div>
         <foot></foot>
+
+
 
 
 
