@@ -28,7 +28,7 @@
 
                     <div class="bbq">
 
-                      <div v-show="show2" v-for="(item,i) of list" :key="i" class="single-member effect-3">
+                      <div v-show="show2" v-for="(item,i) of list" :key="i" class="single-member effect-3" style=" box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1)">
                         <div class="member-image">
                             <img :src="'http://127.0.0.1:3000/'+item.img_url" alt="Member">
                         </div>
@@ -69,6 +69,9 @@
 
 
         </div>
+        <foot></foot>
+
+
 
 
 
@@ -77,9 +80,15 @@
 </template>
 <script>
     import ElCol from "element-ui/packages/col/src/col";
+    import FooTer from "./footer.vue"
 
     export default {
-        components: {ElCol},
+
+        components: {
+            "foot":FooTer,
+            ElCol,
+
+        },
         data(){
           return{
               list:[],//保存玩服务器返回商品列表
@@ -109,6 +118,7 @@
                     //数组拼接的操作
                     var rows = this.list.concat(res.data.data);
                     this.list = rows;
+                    console.log(rows)
                 })
 
             },

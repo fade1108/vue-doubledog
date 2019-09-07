@@ -42,16 +42,16 @@
                     <li class="breadcrumb-item font2">主页</li>
                     <li class="breadcrumb-item font2">腕表</li>
                     <li class="breadcrumb-item font2">运动</li>
-                    <li class="breadcrumb-item font2">卡康斯潜水系列</li>
-                    <li class="breadcrumb-item font2">l3.783.4.56.6</li>
+                    <li class="breadcrumb-item font2">{{product.title}}</li>
+                    <li class="breadcrumb-item font2">{{product.family}}</li>
                 </ul>
                 <P><button class="btn btn-primary mb-md-4 pb-2 "><a class="font2 " href="watch.html">返回</a></button></P>
                 <P class="font3">康卡斯潜水系列</P>
                 <p class="font2 pb-5">L3.783.4.56.6</p>
                 <!--介绍详情页面-->
                 <div class="row bg-white m-0">
-                    <div class="col-sm-5 pl-5  ">
-                        <img class="pl-5 w-75" src="images/watch_conquest.png" alt="卡康斯">
+                    <div class="col-sm-5 pl-5" v-for="(item,i) of pics" :key="i">
+                        <img class="pl-5 w-75" :src="'http://127.0.0.1:3000/'+item.lg" alt="卡康斯">
                     </div>
                     <div class="col-sm-7 p-0">
                         <div class="row">
@@ -69,14 +69,14 @@
 
                                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                                             <div class="card-body">
-                                                <div style="">
-                                                    <p>表款编码：</p>
-                                                    <p>表壳材质：</p>
-                                                    <p>表带材质：</p>
-                                                    <p>表盘指针：</p>
-                                                    <p>表盘刻度：</p>
-                                                    <p>表盘颜色：</p>
-                                                    <p>机芯类型：</p>
+                                                <div>
+                                                    <p>表款编码：{{product.family}}</p>
+                                                    <p>表壳材质：{{product.watchcase}}</p>
+                                                    <p>表带材质：{{product.watchband}}</p>
+                                                    <p>表盘指针：{{product.dial_plate}}</p>
+                                                    <p>表盘刻度：{{product.scale}}</p>
+                                                    <p>表盘颜色：{{product.dial_color}}</p>
+                                                    <p>机芯类型：{{product.movement_type}}</p>
                                                 </div>
 
                                             </div>
@@ -87,7 +87,7 @@
                             </div>
                             <!--第一行-->
                             <div class="col-sm-6 mt-5">
-                                <h1 class="text-center font-weight-bold"> ￥ 19,100.00</h1>
+                                <h1 class="text-center font-weight-bold"> ￥ {{product.price}}</h1>
                             </div>
                             <div class="col-sm-6 mt-5">
                                 <!--花呗按钮折叠导航栏-->
@@ -220,13 +220,39 @@
 
         data(){
             return{
+                product:{},
+                pics:{}
 
                 }
         },
         methods:{
-
+            load(){
+                (async () => {
+                    var result = await this.axios.get(
+                        "http://127.0.0.1:3000/watchdetails",
+                        {
+                            params: {
+                                //lid: this.lid
+                                lid:this.$route.params.lid
+                            }
+                        }
+                    );
+                    console.log(result.data);
+                    this.product = result.data.product;
+                    this.pics = result.data.pics;
+                })();
+            }
         },
+        //用watch 监视变量，只要props变量变化，就重新查找数据 修改data中的变量引起页面切换
         props: ["lid"],
+        created(){
+            this.load();
+        },
+        watch:{
+            $route(){
+                this.load();
+            }
+        }
 
     }
 </script>

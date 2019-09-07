@@ -60,8 +60,10 @@
    <!-- </footer>-->
 </template>
 <script>
+    export default {
     props:{
 
+    }
     }
 </script>
 <style scoped>
