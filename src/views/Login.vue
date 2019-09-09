@@ -22,8 +22,8 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <el-carousel :interval="4000" type="card" height="600px">
-                            <el-carousel-item v-for="item in 3" :key="item">
-                                <h3>{{ item }}</h3>
+                            <el-carousel-item v-for="item in imagesbox" :key="item.id">
+                                 <img :src="item.idView" class="image" style="width: 100% !important;">
                             </el-carousel-item>
                         </el-carousel>
 
@@ -126,7 +126,10 @@
             return {
                 uname: "",
                 upwd: "",
-                activeClass: -1
+                activeClass: -1,
+                imagesbox:[{id:0,idView:require("../assets/imgss/login_1.jpg")},{id:1,idView:require("../assets/imgss/login_2.jpg")},
+
+                    {id:2,idView:require("../assets/imgss/login_3.jpg")}]
             }
         },
         methods: {

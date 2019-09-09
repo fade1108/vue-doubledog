@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div style="background-color: #e8e8e8;">
         <el-header>
             <el-row>
                 <el-col :span="24"><my-header></my-header></el-col>
@@ -13,9 +13,21 @@
             </el-row>
         </el-header>
         <div>
+
+
             <el-row :gutter="10">
                 <el-col :xs="16" :sm="18" :md="20" :lg="21" style="padding-left: 130px !important;">
                     <img src="../../src/assets/imgss/index_1.jpg" >
+                </el-col>
+
+                <el-col :xs="8" :sm="6" :md="4" :lg="3">
+
+                </el-col>
+            </el-row>
+
+            <el-row :gutter="10">
+                <el-col :xs="16" :sm="18" :md="20" :lg="21" style="padding-left: 130px !important;">
+                    <h1>为您精选浪琴系列</h1>
                 </el-col>
 
                 <el-col :xs="8" :sm="6" :md="4" :lg="3">
@@ -55,8 +67,10 @@
 
                 <el-col :xs="8" :sm="6" :md="4" :lg="3">
                     <el-button type="primary" @click="jumpCart" plain>我的购物车</el-button>
+                    <img src="../../src/assets/imgss/pcdh1.png">
                 </el-col>
             </el-row>
+
             <el-row :gutter="10">
                 <el-col :xs="16" :sm="18" :md="20" :lg="21">
                     <el-button @click="loadMore" type="info" plain>加载更多</el-button>
@@ -65,6 +79,50 @@
                 <el-col :xs="8" :sm="6" :md="4" :lg="3">
 
                 </el-col>
+            </el-row>
+
+            <el-row :gutter="10">
+                <el-col :xs="24" :sm="24" :md="24" :lg="24" >
+                    <div style="display:flex;width: 100%;">
+                        <img style="position: relative" src="../../src/assets/imgss/pc_shoes.jpg">
+                        <div style="display: flex;flex-wrap: wrap; position: absolute;width: 1000px;height: 900px;top: 600px;left: 464px"  >
+                          <div style="float: left;position: relative; width: 280px;height: 302px;margin: 20px 25px 30px 20px">
+                            <img src="../assets/ykimgs/1.jpg" style="width: 100%">
+                              <button class="btn btn-primary  mr-3">加入购物车</button>
+                              <button class="btn btn-danger ml-3">点击查看详情</button>
+                          </div>
+                            <div style="float: left;position: relative; width: 280px;height: 302px;margin: 20px 25px 30px 20px">
+                                <img src="../assets/ykimgs/1.jpg" style="width: 100%">
+                                <button class="btn btn-primary  mr-3">加入购物车</button>
+                                <button class="btn btn-danger ml-3">点击查看详情</button>
+                            </div>
+                            <div style="float: left;position: relative; width: 280px;height: 302px;margin: 20px 25px 30px 20px">
+                                <img src="../assets/ykimgs/1.jpg" style="width: 100%">
+                                <button class="btn btn-primary  mr-3">加入购物车</button>
+                                <button class="btn btn-danger ml-3">点击查看详情</button>
+                            </div>
+                            <div style="float: left;position: relative; width: 280px;height: 302px;margin: 20px 25px 30px 20px">
+                                <img src="../assets/ykimgs/1.jpg" style="width: 100%">
+                                <button class="btn btn-primary  mr-3">加入购物车</button>
+                                <button class="btn btn-danger ml-3">点击查看详情</button>
+                            </div>
+                            <div style="float: left;position: relative; width: 280px;height: 302px;margin: 20px 25px 30px 20px">
+                                <img src="../assets/ykimgs/1.jpg" style="width: 100%">
+                                <button class="btn btn-primary  mr-3">加入购物车</button>
+                                <button class="btn btn-danger ml-3">点击查看详情</button>
+                            </div>
+                            <div style="float: left;position: relative; width: 280px;height: 302px;margin: 20px 25px 30px 20px">
+                                <img src="../assets/ykimgs/1.jpg" style="width: 100%">
+                                <button class="btn btn-primary  mr-3">加入购物车</button>
+                                <button class="btn btn-danger ml-3">点击查看详情</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                </el-col>
+
+
             </el-row>
 
 
