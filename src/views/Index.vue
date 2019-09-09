@@ -44,7 +44,7 @@
 
                                 </div>
                                 <div class="linkedin-touch">
-                                    <el-button @click="addcart" :data-lid="item.lid" :data-price="item.price" :data-title="item.title"  type="warning">加入购物车</el-button>
+                                    <button class="btn btn-primary" @click="addcart" :data-lid="item.lid" :data-price="item.price" :data-title="item.title"  type="warning">加入购物车</button>
                                 </div>
                             </div>
                         </div>
