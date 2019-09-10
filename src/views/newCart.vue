@@ -16,35 +16,36 @@
 
         </el-header>
         <el-main>
+
             <el-row :gutter="20" style="margin-top: 80px">
                 <el-col :span="18" :offset="2">
-                    <!--<div class="cart">
-                        &lt;!&ndash;1:顶部按钮: 全选&ndash;&gt;
-                        <el-checkbox v-model="checked">全选</el-checkbox>
+                    <el-row>
+                        <el-button type="text" @click="dialogFormVisible = true">打开嵌套表单的 Dialog</el-button>
 
-                        &lt;!&ndash;2.商品信息&ndash;&gt;
-                        <div class="cart-item" v-for="(item,i) of list" :key="i">
-                            <div class="leftText">
-                                <input type="checkbox">
-                                <div class="lname">{{item.lname}}</div>
-                                <div class="price">{{item.price}}</div>
+                        <el-dialog title="收货地址" :visible.sync="dialogFormVisible">
+                            <el-input v-model="receiver" placeholder="请输入收货人姓名" ></el-input>
+                            <el-input v-model="province" placeholder="请输入省份"></el-input>
+                            <el-input v-model="city" placeholder="请输入城市"></el-input>
+                            <el-input v-model="county" placeholder="请输入归属县"></el-input>
+                            <el-input v-model="address" placeholder="请输入详细地址"></el-input>
+                            <el-input v-model="cellphone" placeholder="请输入电话号码"></el-input>
+                            <button @click="submit" :data-receiver="receiver" :data-province="province" :data-city="city" :data-county="county" :data-address="address" :data-cellphone="cellphone">提交</button>
 
+                            <div slot="footer" class="dialog-footer">
+                                <el-button @click="dialogFormVisible = false">取 消</el-button>
+                                <el-button type="primary" @click="dialogFormVisible = false">确 定</el-button>
                             </div>
-                            <el-button type="danger">删除</el-button>
-
+                        </el-dialog>
+                    </el-row>
+                    <el-row class="el-row77" >
+                        <div class="row77-float" v-for="(item,i) of fadelist" :key="i">
+                            收货地址
+                            <hr style="margin: 0px ;width: 238px;">
+                            {{item.address}}<br>
+                            姓名:{{item.receiver}}<br>
+                            电话: {{item.cellphone}}
                         </div>
-
-
-                        &lt;!&ndash;3.购物车中商品数量:删除选中的商品，清空购物车&ndash;&gt;
-                        <div>
-                            购物车中商品的数量:
-                            <span style="color: red">0</span>
-                            <el-button type="danger">删除选中的商品</el-button>
-                            <el-button type="danger">清空购物车</el-button>
-                        </div>
-
-
-                    </div>-->
+                    </el-row>
                     <el-row style="margin-bottom: 0px">
                         <el-col :span="12">
                             <div class="bg-dark" style="color: #fff;font-size: 25px;font-family: 微软雅黑;">
@@ -138,18 +139,33 @@
 
 </template>
 <script>
+    import ElRow from "element-ui/packages/row/src/row";
+
     export default {
         //当中间创建成功后查询当前用户购物车表
         //如果没有登录，显示提示框“登录”，跳转登录组件
+        components: {ElRow},
         data(){
             return {
                 list:[], //当前登录用户的购物车列表
                 checked: true,//全选
-                n:1
+                n:1,
+                activeclass:-1,
+                fadelist:[],//当前登录用户的发货地址列表
+                receiver:'',
+                province:'',
+                city:'',
+                county:'',
+                address:'',
+                cellphone:'',
+                dialogTableVisible: false,
+                dialogFormVisible: false,
+
             }
         },
         created(){
             this.loadMore();
+            this.loadeadress();
         },
         methods:{
             change(e){
@@ -188,10 +204,20 @@
 
                         //4.3将新数组赋值list
                         this.list = rows;
+                        console.log(this.receiver)
                     }
                 })
+            },
+            loadeadress(){
+                var url ="cartfade";
+                //发送ajax请求
+                this.axios.get(url).then(res=>{
 
+                        var col = res.data.fade;
+                        console.log(col);
+                        this.fadelist = col;
 
+                })
             },
 
             //功能：用户点击删除按钮完成删除指定商品任务
@@ -269,7 +295,7 @@
                                 message: '这是一条成功的提示消息',
                                 type: 'success'
                             });
-                            this.loadMore();//刷新页面
+
                         }
                     })
 
@@ -286,6 +312,20 @@
                     item.cb = cb;
                 }
 
+            },
+            submit(event){
+                //1.获取购物车中数据lid,lname,price
+                var receiver = event.target.dataset.receiver;
+                var province = event.target.dataset.province;
+                var city = event.target.dataset.city;
+                var county = event.target.dataset.county;
+                var address = event.target.dataset.address;
+                var cellphone = event.target.dataset.cellphone;
+                //2.创建url
+                var obj = {receiver:receiver, province:province, city:city,county:county,address:address,cellphone:cellphone};
+                console.log(obj);
+                //3.发送ajax请求获取数据
+
             }
         },
         computed:{
@@ -298,8 +338,7 @@
 
 
             }
-        }
-
+        },
 
 
     }
@@ -325,5 +364,28 @@
     .price{
         margin-left: 25px;
     }*/
+    .el-row77{
+
+        display: flex;
+        justify-content: center;
+    }
+    .row77-float{
+        width: 300px;
+        height: 106px;
+        float: left;
+        background: url(../../src/assets/imgss/mail.jpg)
+        no-repeat;
+        flex-wrap: nowrap;
+        text-align: center;
+    }
+    .row88-float{
+        width: 300px;
+        height: 106px;
+        float: left;
+        background: url(../../src/assets/imgss/mail_1.jpg)
+        no-repeat;
+        flex-wrap: nowrap;
+        text-align: center;
+    }
 
 </style>

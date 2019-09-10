@@ -1,6 +1,12 @@
 <template>
 <header>
     <div id="body">
+        <div style="position: absolute;width: 100px;height: 100px;top: 0px;right: 0px;z-index: 999;background-color: #dcddde;">
+
+        <img src="../../src/assets/imgss/default.png">
+            <p style="margin: 0px">用户名：TOM</p>
+
+        </div>
     <div class="wrapper" id="wrapper">
         <header class="header" style="height: 100px">
             <div class="container">
@@ -178,12 +184,13 @@ export default {
         width: 100%;
         height: 100px;
         overflow: hidden;
+        margin-left: -80px;
     }
 
     .bg-white {
         display: none;
         position: absolute;
-        z-index: 998;
+        z-index: 999;
         width: 100%;
         height: 62px;
         background-color: #fff;
@@ -191,7 +198,7 @@ export default {
 
     .header {
         position: relative;
-        z-index: 999;
+        z-index: 998;
         left: 0;
         top: 0;
         height: 62px;
