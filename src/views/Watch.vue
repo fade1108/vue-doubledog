@@ -272,8 +272,11 @@
                     this.others3=result.data.slice(8,12);
                     this.others4=result.data.slice(12,16);
                     this.others5=result.data.slice(16,20);
+                    var a = this.others;
 
+                    console.log(a);
                 }
+
             )
         },
         components:{

@@ -86,7 +86,7 @@
                     <div style="display:flex;width: 100%;">
                         <img style="position: relative" src="../../src/assets/imgss/pc_shoes.jpg">
                         <div style="display: flex;flex-wrap: wrap; position: absolute;width: 1000px;height: 900px;top: 600px;left: 464px"  >
-                          <div style="float: left;position: relative; width: 280px;height: 302px;margin: 20px 25px 30px 20px">
+                          <div style="float: left;position: relative; width: 280px;height: 302px;margin: 20px 25px 30px 20px;border: 1px slateblue solid">
                             <img src="../assets/ykimgs/1.jpg" style="width: 100%">
                               <button class="btn btn-primary  mr-3">加入购物车</button>
                               <button class="btn btn-danger ml-3">点击查看详情</button>
@@ -188,7 +188,7 @@
                 var title = event.target.dataset.title;
                 var price = event.target.dataset.price;
                 //2.创建url
-                var url = "addcart"
+                var url = "addcart";
                 var obj = {lid:lid, title:title, price:price};
                 console.log(obj);
                 //3.发送ajax请求获取数据
