@@ -9,6 +9,8 @@ import Shoes from "./views/shoes.vue"
 import Shoes_ss from "./views/shoes_ss.vue"
 import glass_index from "./views/glass.vue"
 import glass_details from "./views/glass_detail.vue"
+import dw_index from "./views/dwindex.vue"
+import dw_details from "./views/dwdetails.vue"
 
 Vue.use(Router);
 
@@ -22,7 +24,9 @@ export default new Router({
         {path:"/shoes",component:Shoes},
         {path:"/shoess",component:Shoes_ss},
         {path:"/glass",component:glass_index},
-        {path:"/glassls",component:glass_details}
+        {path:"/glassls",component:glass_details},
+        {path:"/dwindex",component:dw_index},
+        {path:"/dwdetail",component:dw_details}
 
 
     ]

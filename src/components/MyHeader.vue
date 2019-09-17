@@ -10,7 +10,7 @@
     <div class="wrapper" id="wrapper">
         <header class="header" style="height: 100px">
             <div class="container">
-                <h1 class="logo"><a href="#"></a></h1>
+
                 <ul class="nav">
                     <li class="nav-item">
                         <a href="javascript:;" style="font-family: Jokerman">DoubleDog</a>

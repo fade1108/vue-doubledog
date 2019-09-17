@@ -20,7 +20,7 @@
             <el-row :gutter="20" style="margin-top: 80px">
                 <el-col :span="18" :offset="2">
                     <el-row>
-                        <el-button type="text" @click="dialogFormVisible = true">打开嵌套表单的 Dialog</el-button>
+                        <el-button type="text" @click="dialogFormVisible = true">添加新的收货人信息</el-button>
 
                         <el-dialog title="收货地址" :visible.sync="dialogFormVisible">
                             <el-input v-model="receiver" placeholder="请输入收货人姓名" ></el-input>
@@ -30,7 +30,6 @@
                             <el-input v-model="address" placeholder="请输入详细地址"></el-input>
                             <el-input v-model="cellphone" placeholder="请输入电话号码"></el-input>
                             <button @click="submit" :data-receiver="receiver" :data-province="province" :data-city="city" :data-county="county" :data-address="address" :data-cellphone="cellphone">提交</button>
-
                             <div slot="footer" class="dialog-footer">
                                 <el-button @click="dialogFormVisible = false">取 消</el-button>
                                 <el-button type="primary" @click="dialogFormVisible = false">确 定</el-button>
@@ -295,6 +294,7 @@
                                 message: '这是一条成功的提示消息',
                                 type: 'success'
                             });
+                            this.loadMore();
 
                         }
                     })
@@ -325,6 +325,22 @@
                 var obj = {receiver:receiver, province:province, city:city,county:county,address:address,cellphone:cellphone};
                 console.log(obj);
                 //3.发送ajax请求获取数据
+                var url = "address";
+                this.axios.get(url, {params: obj}).then(res =>{
+                    if(res.data.code==-2){
+                        this.$notify({
+                            title: '添加失败',
+                            message: '这是一条警告的提示消息',
+                            type: 'warning'
+                        });
+                    }else {
+                        this.$notify({
+                            title: '添加成功',
+                            message: '这是一条成功的提示消息',
+                            type: 'success'
+                        });
+                    }
+                })
 
             }
         },
