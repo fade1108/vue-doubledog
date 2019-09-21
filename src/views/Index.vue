@@ -160,7 +160,7 @@
                 show2: true,
                 imagesbox: [{id: 0, idView: require("../assets/imgss/dg_lb_1.jpg")}, {
                     id: 1,
-                    idView: require("../assets/imgss/dg_lb_1.jpg")
+                    idView: require("../assets/imgss/dg_lb_2.jpg")
                 },
 
                     {id: 2, idView: require("../assets/imgss/dg_lb_1.jpg")}],

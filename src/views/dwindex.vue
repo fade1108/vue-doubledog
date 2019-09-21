@@ -1,42 +1,13 @@
 <template>
     <div>
-        <!--<div class="xiangbabang">
-            <img src="../../src/assets/img/header/logo.png" class="logo">
-            <ul class="bit">
-                <li>
-                    <a href="javascript:;">夏日新品</a>
-                </li>
-                <li class="nav-item">
-                    <a href="javascript:;">礼品套装</a>
-                </li>
-                <li>
-                    <a href="javascript:;">配饰</a>
-                </li>
-                <li>
-                    <a href="javascript:;">表带</a>
-                </li>
-                <li>
-                    <a href="javascript:;">常见问题</a>
-                </li>
-                <li>
-                    <a href="javascript:;">品牌故事</a>
-                </li>
-                <li>
-                    <a href="javascript:;">线下门店</a>
-                </li>
-
-            </ul>
-            <img src="../../src/assets/img/header/person.png" class="person">
-        </div>-->
-
         <div>
+            <my-header></my-header>
             <div class="container-fluid px-0" style="margin-top:-80px">
                 <div id="demo" class="carousel" data-ride="carousel">
                     <!-- 1.轮播图片-->
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img class="w-100" src="../../src/assets/img/index/01.jpg" alt="" />
-
+                            <img class="w-100" src="../../src/assets/img/index/01.jpg">
                         </div>
                         <div class="carousel-item">
                             <img class="w-100" src="../../src/assets/img/index/02.jpg">
@@ -62,208 +33,79 @@
             <div>
                 <h2 style="text-align: center">为您精选</h2>
                 <div class="row mx-0  my_style floor">
-                    <div class="col-3 px-0">
-                        <img src="../../src/assets/img/index/cl1.png" class="img1">
+                    <div class="col-3 px-0 jst" v-for="(item,ig) of dwwatch1" :key="ig">
+                        <img :src="`http://127.0.0.1:3000/`+item.pic" class="img1">
                         <div>
-                            <span>CLASSIC PETITE ASHFIELD</span><br>
-                            <span>36 MM</span><br>
-                            <span>￥ 1490</span><br>
-                            <button>立即购买</button>
+                            <span>{{item.title}}</span><br>
+                            <span>{{item.size}}</span><br>
+                            <span>￥{{item.price}}</span><br>
+                            <button><router-link  :to="`/dwdetail/${item.href.split('=')[1]}`">立即购买</router-link></button>
+                            
                         </div>
                     </div>
-                    <div class="col-3 px-0">
-                        <img src="../../src/assets/img/index/cl4.png" class="img1">
-                        <div>
-                            <span>CLASSIC PETITE ASHFIELD</span><br>
-                            <span>36 MM</span><br>
-                            <span>￥ 1490</span><br>
-                            <button>立即购买</button>
-                        </div>
-                    </div>
-                    <div class="col-3 px-0">
-                        <img src="../../src/assets/img/index/cl3.png" class="img1">
-                        <div>
-                            <span>CLASSIC PETITE ASHFIELD</span><br>
-                            <span>36 MM</span><br>
-                            <span>￥ 1490</span><br>
-                            <button>立即购买</button>
-                        </div>
-                    </div>
-                    <div class="col-3 px-0">
-                        <img src="../../src/assets/img/index/cl2.png" class="img1">
-                        <div>
-                            <span>CLASSIC PETITE ASHFIELD</span><br>
-                            <span>36 MM</span><br>
-                            <span>￥ 1490</span><br>
-                            <button>立即购买</button>
-                        </div>
-                    </div>
-                </div>
-                <img src="../../src/assets/img/index/07.jpg" alt="" class="img7">
+                  
+                </div> 
+                <img src="../../src/assets/img/index/601.jpg" alt="" class="img7">
                 <!-- 二层手镯 -->
                 <div class="row mx-0  my_style floor">
-                    <div class="col-3 px-0">
-                        <img src="../../src/assets/img/index/s1.png" class="img1">
+                    <div class="col-3 px-0 jst" v-for="(item,ig) of dwwatch2" :key="ig">
+                        <img :src="`http://127.0.0.1:3000/`+item.pic" class="img1">
                         <div>
-                            <span>CLASSIC PETITE ASHFIELD</span><br>
-                            <span>36 MM</span><br>
-                            <span>￥ 1490</span><br>
-                            <button>立即购买</button>
+                            <span>{{item.title}}</span><br>
+                            <span>{{item.size}}</span><br>
+                            <span>￥{{item.price}}</span><br>
+                            <button><router-link  :to="`/dwdetail/${item.href.split('=')[1]}`">立即购买</router-link></button>
                         </div>
                     </div>
-                    <div class="col-3 px-0">
-                        <img src="../../src/assets/img/index/s2.png" class="img1">
-                        <div>
-                            <span>CLASSIC PETITE ASHFIELD</span><br>
-                            <span>36 MM</span><br>
-                            <span>￥ 1490</span><br>
-                            <button>立即购买</button>
-                        </div>
-                    </div>
-                    <div class="col-3 px-0">
-                        <img src="../../src/assets/img/index/s3.png" class="img1">
-                        <div>
-                            <span>CLASSIC PETITE ASHFIELD</span><br>
-                            <span>36 MM</span><br>
-                            <span>￥ 1490</span><br>
-                            <button>立即购买</button>
-                        </div>
-                    </div>
-                    <div class="col-3 px-0">
-                        <img src="../../src/assets/img/index/s4.png" class="img1">
-                        <div>
-                            <span>CLASSIC PETITE ASHFIELD</span><br>
-                            <span>36 MM</span><br>
-                            <span>￥ 1490</span><br>
-                            <button>立即购买</button>
-                        </div>
-                    </div>
+                   
                 </div>
-                <img src="../../src/assets/img/index/08.jpg" alt="" class="img7">
+                <img src="../../src/assets/img/index/603.jpg" alt="" class="img7">
                 <!--第三层  -->
                 <div class="row mx-0  my_style floor">
-                    <div class="col-3 px-0">
-                        <img src="../../src/assets/img/index/p1.png" class="img1">
+                    <div class="col-3 px-0 jst" v-for="(item,ig) of dwwatch3" :key="ig">
+                        <img :src="`http://127.0.0.1:3000/`+item.pic" class="img1">
                         <div>
-                            <span>CLASSIC PETITE ASHFIELD</span><br>
-                            <span>36 MM</span><br>
-                            <span>￥ 1490</span><br>
-                            <button>立即购买</button>
+                            <span>{{item.title}}</span><br>
+                            <span>{{item.size}}</span><br>
+                            <span>￥{{item.price}}</span><br>
+                            <button><router-link  :to="`/dwdetail/${item.href.split('=')[1]}`">立即购买</router-link></button>
                         </div>
                     </div>
-                    <div class="col-3 px-0">
-                        <img src="../../src/assets/img/index/p2.png" class="img1">
-                        <div>
-                            <span>CLASSIC PETITE ASHFIELD</span><br>
-                            <span>36 MM</span><br>
-                            <span>￥ 1490</span><br>
-                            <button>立即购买</button>
-                        </div>
-                    </div>
-                    <div class="col-3 px-0">
-                        <img src="../../src/assets/img/index/p3.png" class="img1">
-                        <div>
-                            <span>CLASSIC PETITE ASHFIELD</span><br>
-                            <span>36 MM</span><br>
-                            <span>￥ 1490</span><br>
-                            <button>立即购买</button>
-                        </div>
-                    </div>
-                    <div class="col-3 px-0">
-                        <img src="../../src/assets/img/index/p4.png" class="img1">
-                        <div>
-                            <span>CLASSIC PETITE ASHFIELD</span><br>
-                            <span>36 MM</span><br>
-                            <span>￥ 1490</span><br>
-                            <button>立即购买</button>
-                        </div>
-                    </div>
+                    
                 </div>
-                <img src="../../src/assets/img/index/09.jpg" alt="" class="img7">
+                <img src="../../src/assets/img/index/602.jpg" alt="" class="img7">
                 <!-- 第四层 -->
                 <div class="row mx-0  my_style floor">
-                    <div class="col-3 px-0">
-                        <img src="../../src/assets/img/index/p5.png" class="img1">
+                    <div class="col-3 px-0 jst" v-for="(item,ig) of dwwatch4" :key="ig">
+                        <img :src="`http://127.0.0.1:3000/`+item.pic" class="img1">
                         <div>
-                            <span>CLASSIC PETITE ASHFIELD</span><br>
-                            <span>36 MM</span><br>
-                            <span>￥ 1490</span><br>
-                            <button>立即购买</button>
+                            <span>{{item.title}}</span><br>
+                            <span>{{item.size}}</span><br>
+                            <span>￥{{item.price}}</span><br>
+                            <button><router-link  :to="`/dwdetail/${item.href.split('=')[1]}`">立即购买</router-link></button>
                         </div>
                     </div>
-                    <div class="col-3 px-0">
-                        <img src="../../src/assets/img/index/p6.png" class="img1">
-                        <div>
-                            <span>CLASSIC PETITE ASHFIELD</span><br>
-                            <span>36 MM</span><br>
-                            <span>￥ 1490</span><br>
-                            <button>立即购买</button>
-                        </div>
-                    </div>
-                    <div class="col-3 px-0">
-                        <img src="../../src/assets/img/index/p7.png" class="img1">
-                        <div>
-                            <span>CLASSIC PETITE ASHFIELD</span><br>
-                            <span>36 MM</span><br>
-                            <span>￥ 1490</span><br>
-                            <button>立即购买</button>
-                        </div>
-                    </div>
-                    <div class="col-3 px-0">
-                        <img src="../../src/assets/img/index/p8.png" class="img1">
-                        <div>
-                            <span>CLASSIC PETITE ASHFIELD</span><br>
-                            <span>36 MM</span><br>
-                            <span>￥ 1490</span><br>
-                            <button>立即购买</button>
-                        </div>
-                    </div>
+                 
                 </div>
                 <img src="../../src/assets/img/index/10.jpg" alt="" class="img7">
                 <!-- 第五层 -->
                 <div class="row mx-0  my_style floor">
-                    <div class="col-3 px-0">
-                        <img src="../../src/assets/img/index/dw1.png" class="img1">
+                    <div class="col-3 px-0 jst" v-for="(item,ig) of dwwatch5" :key="ig">
+                        <img :src="`http://127.0.0.1:3000/`+item.pic" class="img1">
                         <div>
-                            <span>CLASSIC PETITE ASHFIELD</span><br>
-                            <span>36 MM</span><br>
-                            <span>￥ 1490</span><br>
-                            <button>立即购买</button>
+                            <span>{{item.title}}</span><br>
+                            <span>{{item.size}}</span><br>
+                            <span>￥{{item.price}}</span><br>
+                            <button><router-link  :to="`/dwdetail/${item.href.split('=')[1]}`">立即购买</router-link></button>
                         </div>
                     </div>
-                    <div class="col-3 px-0">
-                        <img src="../../src/assets/img/index/dw2.png" class="img1">
-                        <div>
-                            <span>CLASSIC PETITE ASHFIELD</span><br>
-                            <span>36 MM</span><br>
-                            <span>￥ 1490</span><br>
-                            <button>立即购买</button>
-                        </div>
-                    </div>
-                    <div class="col-3 px-0">
-                        <img src="../../src/assets/img/index/dw3.png" class="img1">
-                        <div>
-                            <span>CLASSIC PETITE ASHFIELD</span><br>
-                            <span>36 MM</span><br>
-                            <span>￥ 1490</span><br>
-                            <button>立即购买</button>
-                        </div>
-                    </div>
-                    <div class="col-3 px-0">
-                        <img src="../../src/assets/img/index/dw4.png" class="img1">
-                        <div>
-                            <span>CLASSIC PETITE ASHFIELD</span><br>
-                            <span>36 MM</span><br>
-                            <span>￥ 1490</span><br>
-                            <button>立即购买</button>
-                        </div>
-                    </div>
+                   
                 </div>
                 <h2 style="text-align: center">日志</h2>
-                <span class="msg2">DANIEL WELLINGTON的最新情报</span>
+                <p class="msg2">DANIEL WELLINGTON的最新情报</p>
                 <!-- 日志 -->
                 <div class="down">
-                    <div style="text-align: center">
+                    <div style="text-align: center;background:#f4f4f4;margin-right:15px;">
                         <img src="../../src/assets/img/index/11.jpg" alt="">
                         <p>2019年8月1日</p>
                         <h2>时差恋人，时刻爱</h2>
@@ -272,7 +114,7 @@
                         <p>阅读全部内容</p>
 
                     </div>
-                    <div style="text-align: center" class="down2">
+                    <div style="text-align: center;background:#f4f4f4;margin-right:15px;">
                         <img src="../../src/assets/img/index/12.jpg" alt="">
                         <p>2019年8月1日</p>
                         <h2>时差恋人，时刻爱</h2>
@@ -280,7 +122,7 @@
                         <p>跨越时区与地域，同步你我时间</p>
                         <p>阅读全部内容</p>
                     </div>
-                    <div style="text-align: center">
+                    <div style="text-align: center;background:#f4f4f4;">
                         <img src="../../src/assets/img/index/13.jpg" alt="">
                         <p>2019年8月1日</p>
                         <h2>时差恋人，时刻爱</h2>
@@ -298,6 +140,33 @@
 </template>
 <script>
     export default {
+        data(){
+            return{
+                dwwatch1:[],
+                dwwatch2:[],
+                dwwatch3:[],
+                dwwatch4:[],
+                dwwatch5:[],
+            }
+        },
+    props:[],
+     watch:{},
+       
+     created() {
+    this.axios.get("dwindex").then(result => {
+        
+      this.dwwatch1=result.data.slice(0,4);
+      console.log(this.dwwatch1);
+      this.dwwatch2=result.data.slice(4,8);
+      console.log(this.dwwatch2);
+      this.dwwatch3=result.data.slice(8,12);
+      console.log(this.dwwatch3);
+      this.dwwatch4=result.data.slice(12,16);
+      console.log(this.dwwatch2);
+      this.dwwatch5=result.data.slice(16,20);
+      console.log(this.dwwatch5);
+    });
+  }
 
     }
 </script>
@@ -326,14 +195,14 @@
         letter-spacing: .3rem;
         margin-top: 15px;
         padding-bottom: 0;
-        margin-left:40%;
+        /* margin-left:25%; */
     }
     .down{
-        width: 1440px;
+        /* width: 1440px; */
         display: flex;
-        margin-left: 180px;
-
-        justify-content: space-between;
+        /* margin-left: 180px; */
+        margin: 0 auto;
+        justify-content: center;
 
     }
     .down img{
@@ -404,5 +273,8 @@
         margin-left: 30px;
 
     }
-
+.jst img:hover{
+    background: rgb(218, 178, 178);
+  cursor: pointer;
+}
 </style>

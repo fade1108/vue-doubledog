@@ -29,8 +29,8 @@
     </el-row>-->
     <div class="container-fluid">
         <!-- 上部分 -->
-        <div class="up">
-            <div class="row up1 mx-0">
+        <div class="upp">
+            <div class="row">
                 <div class="col-2 px-0">
                     <ul>
                         <h2>手表</h2>
@@ -90,7 +90,7 @@
                 </div>
 
             </div>
-            <div class=" row up2 px-0">
+            <div class=" row  px-0">
                 <div class="col-2" mx-0>
                     <ul>
                         <li><a href="javascript:;">浪琴手表</a></li>
@@ -195,7 +195,7 @@
         padding: 0;
         margin: 0;
     }
-    .up{
+    .upp{
         width: 1200px;
         height: 415px;
         margin: 0 15%;

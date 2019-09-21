@@ -23,10 +23,9 @@
                     <div class="col-lg-6">
                         <el-carousel :interval="4000" type="card" height="600px">
                             <el-carousel-item v-for="item in imagesbox" :key="item.id">
-                                 <img :src="item.idView" class="image" style="width: 100% !important;">
+                                 <img :src="item.idView" class="" style="width: 100% !important;">
                             </el-carousel-item>
                         </el-carousel>
-
                     </div>
                     <div class="col-lg-6">
                         <div class="f-container" id="f-container" :class="activeClass == 0 ? 'right-panel-active':'' ">
@@ -39,10 +38,10 @@
                                         <a class="iconfont a3" style="font-size: 30px">&#xe637;</a>
                                     </div>
                                     <span>第三方账号注册</span>
-                                    <mt-field label="用户名" placeholder="请输入注册用户名"></mt-field>
-                                    <mt-field label="密码" placeholder="请输入密码"></mt-field>
-                                    <mt-field label="手机号" placeholder="请输入手机号"></mt-field>
-                                    <button>注册</button>
+                                    <mt-field label="用户名" placeholder="请输入注册用户名" v-model="uid"></mt-field>
+                                    <mt-field label="密码" placeholder="请输入密码" v-model="upw"></mt-field>
+                                    <mt-field label="手机号" placeholder="请输入手机号" v-model="uphone"></mt-field>
+                                    <mt-button @click="del">注册</mt-button>
                                 </div>
                             </div>
                             <div class="form-container sign-in-container">
@@ -129,7 +128,10 @@
                 activeClass: -1,
                 imagesbox:[{id:0,idView:require("../assets/imgss/login_1.jpg")},{id:1,idView:require("../assets/imgss/login_2.jpg")},
 
-                    {id:2,idView:require("../assets/imgss/login_3.jpg")}]
+                    {id:2,idView:require("../assets/imgss/login_3.jpg")}],
+                uid: "",
+                upw: "",
+                uphone: ""
             }
         },
         methods: {
@@ -163,6 +165,41 @@
                 })
 
 
+            },
+            del() {
+                console.log(1)
+                //1.创建正则表达式验证用户名和密码的格式是否是3~12位数字
+                var regu = /^[a-z0-9]{3,12}$/i;
+                // 2.验证手机号
+                var regp = /^[1][3,4,5,7,8][0-9]{9}$/i;
+                //  获取用户的uid,upwd,uphone
+                var uid = this.uid; //账户
+                var upw = this.upw; //密码
+                var uphone = this.uphone; //手机号
+                //验证用户名，如果出错错误
+                if (!regu.test(uid)) {
+                    // 1提示用户错误
+                    this.$toast("用户名格式不正确");
+                    return;
+                    //停止当前函数继续执行
+
+                }
+                if (!regu.test(upw)) {
+                    this.$notify({
+                        title: "添加失败",
+                        message: "密码格式不正确",
+                        type: "warning"
+                    });
+                    return;
+                }
+                if (!regp.test(uphone)) {
+                    this.$notify({
+                        title: "添加失败",
+                        message: "手机格式不正确",
+                        type: "warning"
+                    });
+                    return;
+                }
             },
             getClass() {
                 this.activeClass = 0;

@@ -45,11 +45,17 @@
             <div class="row">
                 <div class="left_main col-lg-6 col-md-6 px-0 mx-0">
                     <div class="lefttTop ">
+
+
                         <img class="img_1 " src="../../public/images/木九十光学镜.jpg" alt="" style="width: 100%!important;">
+
                         <div class="w_1 mb-3">
+                            <button class="btn btn-light">查看详情</button>
                             <p class="mb-0">Sunglasses Collection</p>
                             <h4>木九十光学眼镜</h4>
                         </div>
+
+
                     </div>
                     <div class="leftBottom pb-sm-3 pb-md-0">
                         <img class="img_1" src="../../public/images/雷朋太阳镜.jpg" alt="">
@@ -125,7 +131,6 @@
         position: relative;
     }
     .lefttTop{
-
         width: 100%;
         position: relative;
         margin-bottom:10px;
