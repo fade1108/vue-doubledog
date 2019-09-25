@@ -14,27 +14,19 @@
                 <ul class="nav">
                     <li class="nav-item">
                         <a href="javascript:;" style="font-family: Jokerman">DoubleDog</a>
+                        <a href="http://127.0.0.1:8081/#/indexdg">综合购物商城</a>
                     </li>
                     <li class="nav-item" data-subNav="nav_iphone">
-                        <a href="javascript:;">综合购物商城</a>
+                        <a href="http://127.0.0.1:8081/#/dwindex">dw手表</a>
                     </li>
                     <li class="nav-item" data-subNav="nav_subIphone">
-                        <a href="javascript:;">浪琴手表</a>
+                        <a href="http://127.0.0.1:8081/#/watch">浪琴手表</a>
                     </li>
                     <li class="nav-item" data-subNav="nav_voice">
-                        <a href="javascript:;">鞋类</a>
+                        <a href="http://127.0.0.1:8081/#/shoes">鞋类</a>
                     </li>
                     <li class="nav-item" data-subNav="nav_parts">
-                        <a href="javascript:;">书籍</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="javascript:;">暴龙眼镜</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="javascript:;">包类</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="javascript:;">项链</a>
+                        <a href="http://127.0.0.1:8081/#/glass">暴龙眼镜</a>
                     </li>
                     <li class="nav-item">
                         <a href="javascript:;">社区</a>
@@ -46,94 +38,91 @@
 
         <div class="sub-nav">
             <div class="sub-nav__wrap" data-link="nav_iphone">
-                <a href="javascript:;">
-                    <img src="../../public/images/cont/1-1.png" alt="#">
+                <a href="#">
+                    <img src="../assets/xiaotu/watch-small-1.jpg" alt="#">
 
                 </a>
-                <a href="javascript:;">
-                    <img src="../../public/images/cont/1-2.png" alt="#">
+                <a href="#">
+                    <img src="../assets/xiaotu/watch-small-2.jpg" alt="#">
 
                 </a>
-                <a href="javascript:;">
-                    <img src="../../public/images/cont/1-3.png" alt="#">
+                <a href="#">
+                    <img src="../assets/xiaotu/watch-small-3.jpg" alt="#">
 
                 </a>
-                <a href="javascript:;">
-                    <img src="../../public/images/cont/1-4.png" alt="#">
+                <a href="#">
+                    <img src="../assets/xiaotu/watch-small-4.jpg" alt="#">
 
                 </a>
-                <a href="javascript:;">
-                    <img src="../../public/images/cont/1-5.png" alt="#">
+                <a href="#">
+                    <img src="../assets/xiaotu/watch-small-5.jpg" alt="#">
 
                 </a>
             </div>
             <div class="sub-nav__wrap" data-link="nav_subIphone">
                 <a href="#">
-                    <img src="../../public/images/cont/2-1.png" alt="#">
+                    <img src="../assets/xiaotu/watch-small-1.jpg" alt="#">
 
                 </a>
                 <a href="#">
-                    <img src="../../public/images/cont/2-2.png" alt="#">
+                    <img src="../assets/xiaotu/watch-small-2.jpg" alt="#">
 
                 </a>
                 <a href="#">
-                    <img src="../../public/images/cont/2-3.png" alt="#">
+                    <img src="../assets/xiaotu/watch-small-3.jpg" alt="#">
 
                 </a>
                 <a href="#">
-                    <img src="../../public/images/cont/2-4.png" alt="#">
+                    <img src="../assets/xiaotu/watch-small-4.jpg" alt="#">
 
                 </a>
                 <a href="#">
-                    <img src="../../public/images/cont/2-5.png" alt="#">
+                    <img src="../assets/xiaotu/watch-small-5.jpg" alt="#">
 
                 </a>
-                <a href="#">
-                    <img src="../../public/images/cont/2-6.png" alt="#">
 
-                </a>
-                <a href="#">
-                    <img src="../../public/images/cont/2-7.png" alt="#">
-
-                </a>
             </div>
             <div class="sub-nav__wrap" data-link="nav_voice">
                 <a href="#">
-                    <img src="../../public/images/cont/3-1.png" alt="#">
+                    <img src="../assets/xiaotu/shoe-small-1.jpg" alt="#">
 
                 </a>
                 <a href="#">
-                    <img src="../../public/images/cont/3-2.png" alt="#">
+                    <img src="../assets/xiaotu/shoe-small-2.jpg" alt="#">
 
                 </a>
                 <a href="#">
-                    <img src="../../public/images/cont/3-3.png" alt="#">
+                    <img src="../assets/xiaotu/shoe-small-3.jpg" alt="#">
+
+                </a>
+                <a href="#">
+                    <img src="../assets/xiaotu/shoe-small-4.jpg" alt="#">
+
+                </a>
+                <a href="#">
+                    <img src="../assets/xiaotu/shoe-small-5.jpg" alt="#">
 
                 </a>
             </div>
             <div class="sub-nav__wrap" data-link="nav_parts">
-                <a href="#">
-                    <img src="../../public/images/cont/4-1.png" alt="#">
+                <a href="javascript:;">
+                    <img src="../assets/xiaotu/glass-small-1.jpg" alt="#">
 
                 </a>
-                <a href="#">
-                    <img src="../../public/images/cont/4-2.png" alt="#">
+                <a href="javascript:;">
+                    <img src="../assets/xiaotu/glass-small-2.jpg" alt="#">
 
                 </a>
-                <a href="#">
-                    <img src="../../public/images/cont/4-3.png" alt="#">
+                <a href="javascript:;">
+                    <img src="../assets/xiaotu/glass-small-3.jpg" alt="#">
 
                 </a>
-                <a href="#">
-                    <img src="../../public/images/cont/4-4.png" alt="#">
+                <a href="javascript:;">
+                    <img src="../assets/xiaotu/glass-small-4.jpg" alt="#">
 
                 </a>
-                <a href="#">
-                    <img src="../../public/images/cont/4-5.png" alt="#">
-
-                </a>
-                <a href="#">
-                    <img src="../../public/images/cont/4-6.png" alt="#">
+                <a href="javascript:;">
+                    <img src="../assets/xiaotu/glass-small-5.jpg" alt="#">
 
                 </a>
             </div>

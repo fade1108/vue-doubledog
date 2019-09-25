@@ -53,7 +53,7 @@
                             <div class="member-info">
                                 <h3>{{item.title}}</h3>
                                 <h5>{{item.price}}</h5>
-                                <p>usmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>{{item.type}}</p>
                                 <div class="social-touch">
                                     <div class="fb-touch">
                                         <el-button type="danger">立即购买</el-button>
@@ -163,7 +163,7 @@
                     idView: require("../assets/imgss/dg_lb_2.jpg")
                 },
 
-                    {id: 2, idView: require("../assets/imgss/dg_lb_1.jpg")}],
+                    {id: 2, idView: require("../assets/imgss/dg_lb_3.jpg")}],
                 shoess: [],//保存服务器返回鞋子商品详情
                 gl:[]
             }
@@ -775,7 +775,7 @@
         position: relative;
         width: 280px;
         height: 302px;
-        margin: 20px 25px 30px 20px;
+        margin: 10px 25px 30px 20px;
 
     }
 

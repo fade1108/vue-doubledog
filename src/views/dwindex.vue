@@ -135,11 +135,21 @@
 
             </div>
         </div>
+        <foot></foot>
     </div>
 
 </template>
 <script>
+    import FooTer from "./footer.vue"
+    import ElRow from "element-ui/packages/row/src/row";
+
+
+
+
     export default {
+        components: {
+
+            "foot": FooTer,},
         data(){
             return{
                 dwwatch1:[],

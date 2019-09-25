@@ -3,7 +3,7 @@
     <div class="bg-picture">
       <div class="row killer">
         <div class="col-6 px-0 background-color:#fff">
-          <img :src="`http://127.0.0.1:3000/`+pics.md" class="main_picture" />
+          <img :src="`http://127.0.0.1:3000/`+pics[0].md" class="main_picture" />
           <ul class="img_size d-flex list-unstyled">
             <li>
               <img src="../../src/assets/img/watch/sm_1_10.png" />
@@ -312,10 +312,15 @@
         </div>
       </div>
     </div>
+    <foot></foot>
   </div>
 </template>
 <script>
+    import FooTer from "./footer.vue"
 export default {
+    components: {
+        "foot": FooTer,
+    },
         data(){
             return{
                 product:{},
@@ -396,7 +401,7 @@ export default {
 
 .DAPP {
   display: block;
-  font-size: px;
+  /*font-size: px;*/
   color: #00081c;
   padding-bottom: 5px;
   text-align: center;

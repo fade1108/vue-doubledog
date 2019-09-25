@@ -167,8 +167,8 @@
                     <a href="javescript:;">网站地址</a>
                 </li>
             </ul>
-            <img src="" alt=""><a style="color: #607285"> 粤公网安备 44030502000796号 | 粤ICP备15098750号-1M | 营业执照</a>
-            <p style="color: #607285"><a> ALL RIGHTS RESERVED. COPYRIGHT © 丹尼尔惠灵顿贸易（深圳）有限公司</a>
+            <img src="" alt=""><a style="color: #607285"> 陕公网安备 44030502000796号 | 陕ICP备15098750号-1M | 营业执照</a>
+            <p style="color: #607285"><a> ALL RIGHTS RESERVED. COPYRIGHT © DoubleDog（西安）有限公司</a>
             </p>
 
         </div>

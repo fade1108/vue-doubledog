@@ -38,10 +38,10 @@
                                         <a class="iconfont a3" style="font-size: 30px">&#xe637;</a>
                                     </div>
                                     <span>第三方账号注册</span>
-                                    <mt-field label="用户名" placeholder="请输入注册用户名" v-model="uid"></mt-field>
-                                    <mt-field label="密码" placeholder="请输入密码" v-model="upw"></mt-field>
-                                    <mt-field label="手机号" placeholder="请输入手机号" v-model="uphone"></mt-field>
-                                    <mt-button @click="del">注册</mt-button>
+                                    <el-input @focus="open" placeholder="请输入注册用户名" v-model="runame"></el-input>
+                                    <el-input @focus="open2" label="密码" placeholder="请输入密码" v-model="rupwd"></el-input>
+                                    <el-input @focus="open3" label="手机号" placeholder="请输入手机号" v-model="rtel"></el-input>
+                                    <button @click="del" :data-runame="runame" :data-rupwd="rupwd" :data-rtel="rtel">注册</button>
                                 </div>
                             </div>
                             <div class="form-container sign-in-container">
@@ -53,8 +53,8 @@
                                         <a class="iconfont a3" style="font-size: 30px">&#xe637;</a>
                                     </div>
                                     <span>第三方账号登录</span>
-                                    <mt-field label="用户名" placeholder="请输入用户名" v-model="uname"></mt-field>
-                                    <mt-field label="密码" placeholder="请输入密码" v-model="upwd"></mt-field>
+                                    <el-input @focus="open"  placeholder="请输入用户名" v-model="uname"></el-input>
+                                    <el-input @focus="open2"  placeholder="请输入密码" v-model="upwd"></el-input>
 
 
                                     <a href="javascript:;">忘记密码？</a>
@@ -129,12 +129,58 @@
                 imagesbox:[{id:0,idView:require("../assets/imgss/login_1.jpg")},{id:1,idView:require("../assets/imgss/login_2.jpg")},
 
                     {id:2,idView:require("../assets/imgss/login_3.jpg")}],
-                uid: "",
-                upw: "",
-                uphone: ""
+                runame: "",
+                rupwd: "",
+                rtel: ""
             }
         },
         methods: {
+            submit(event){
+                //1.获取购物车中数据lid,lname,price
+                var uname = event.target.dataset.uname;
+                var upwd = event.target.dataset.upwd;
+                var tel = event.target.dataset.tel;
+
+                //2.创建url
+                var obj = {uname:uname, upwd:upwd, tel:tel};
+                console.log(obj);
+                //3.发送ajax请求获取数据
+                var url = "logregist";
+                this.axios.get(url, {params: obj}).then(res =>{
+                    if(res.data.code==-2){
+                        this.$notify({
+                            title: '添加失败',
+                            message: '这是一条警告的提示消息',
+                            type: 'warning'
+                        });
+                    }else {
+                        this.$notify({
+                            title: '添加成功',
+                            message: '这是一条成功的提示消息',
+                            type: 'success'
+                        });
+                    }
+                })
+
+            },
+            open3(){
+                this.$message({
+                    message:'大陆手机号标准格式',
+                    center:true
+                })
+            },
+            open() {
+                this.$message({
+                    message: '用户名3-12位',
+                    center: true
+                });
+            },
+            open2(){
+                this.$message({
+                    message: '密码3-12位',
+                    center: true
+                });
+            },
             login() {
                 var u = this.uname;
                 var p = this.upwd;
@@ -167,24 +213,24 @@
 
             },
             del() {
-                console.log(1)
+
                 //1.创建正则表达式验证用户名和密码的格式是否是3~12位数字
                 var regu = /^[a-z0-9]{3,12}$/i;
                 // 2.验证手机号
                 var regp = /^[1][3,4,5,7,8][0-9]{9}$/i;
                 //  获取用户的uid,upwd,uphone
-                var uid = this.uid; //账户
-                var upw = this.upw; //密码
-                var uphone = this.uphone; //手机号
+                var runame = this.runame; //账户
+                var rupwd = this.rupwd; //密码
+                var rtel = this.rtel; //手机号
                 //验证用户名，如果出错错误
-                if (!regu.test(uid)) {
+                if (!regu.test(runame)) {
                     // 1提示用户错误
                     this.$toast("用户名格式不正确");
                     return;
                     //停止当前函数继续执行
 
                 }
-                if (!regu.test(upw)) {
+                if (!regu.test(rupwd)) {
                     this.$notify({
                         title: "添加失败",
                         message: "密码格式不正确",
@@ -192,7 +238,7 @@
                     });
                     return;
                 }
-                if (!regp.test(uphone)) {
+                if (!regp.test(rtel)) {
                     this.$notify({
                         title: "添加失败",
                         message: "手机格式不正确",
@@ -200,6 +246,35 @@
                     });
                     return;
                 }
+
+                //2.创建url
+                var obj = {uname:runame, upwd:rupwd, tel:rtel};
+                console.log(obj);
+                //3.发送ajax请求获取数据
+                var url = "logregist";
+                this.axios.get(url, {params: obj}).then(res =>{
+                    if(res.data.code==-2){
+                        this.$notify({
+                            title: '添加失败',
+                            message: '这是一条警告的提示消息',
+                            type: 'warning'
+                        });
+                    }else {
+                        this.$notify({
+                            title: '添加成功',
+                            message: '这是一条成功的提示消息',
+                            type: 'success'
+                        });
+                    }
+                })
+
+
+
+
+
+
+
+
             },
             getClass() {
                 this.activeClass = 0;
