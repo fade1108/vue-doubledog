@@ -58,7 +58,7 @@
 .contenter .couponconts{border-bottom: 0px;}
 .coupon{width: 200px;height: 140px;display: block;border: 2px solid #EDEDED;display: inline-block;margin: 20px 60px 0px 0px;position: relative;cursor: pointer;}
 .couponDiv{width: 100%;height: 100px;background:#cccccc ;padding: 20px;color: #bbbbbb;}
-.couponprice{font-size: 20px;}
+.couponprice{font-size: 20px;margin-bottom: 10px}
 .coupontime{margin-top: 10px;}
 .coupontype{display: block;text-align: center;width: 100%;height: 40px;line-height: 40px;color: #bbbbbb;}
 .couponDivClick{background: #209ceb;color: white;}

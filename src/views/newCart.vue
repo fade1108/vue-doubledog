@@ -79,7 +79,7 @@
                         <el-col class="cart-item" :span="12">
                             <div class="leftText">
                                 <input type="checkbox" v-model="item.cb"></input>
-                                <img src="../../src/assets/imgss/0ea0.jpg">
+                                <img src="../../src/assets/imgss/cart2.jpg">
                                 <div class="lname ml-5" style="width: 300px!important;"><p>{{item.lname}}</p></div>
                             </div>
                         </el-col>
@@ -119,7 +119,7 @@
                         <el-col :span="6">全选<input @click="selectAll" type="checkbox"><button class="btn btn-danger" @click="deleteItems">删除选中的商品</button></el-col>
                         <el-col :span="6"><div><img src="../../src/assets/imgss/keai1.jpg"></div></el-col>
                         <el-col :span="6"><div><img src="../../src/assets/imgss/keai1.jpg"></div></el-col>
-                        <el-col :span="6">总价：<h2>￥{{total.toFixed(2)}}</h2><button class="btn btn-success">结账</button></el-col>
+                        <el-col :span="6">总价：<h2>￥{{total.toFixed(2)}}</h2><button @click="payfor" class="btn btn-success">结账</button></el-col>
                     </el-row>
 
 
@@ -167,6 +167,9 @@
             this.loadeadress();
         },
         methods:{
+            payfor(){
+                this.$router.push('/pay')
+            },
             change(e){
                 var count = e.target.dataset.count;
 //                console.log(count)
@@ -323,9 +326,60 @@
                 var cellphone = event.target.dataset.cellphone;
                 //2.创建url
                 var obj = {receiver:receiver, province:province, city:city,county:county,address:address,cellphone:cellphone};
-                console.log(obj);
                 //3.发送ajax请求获取数据
                 var url = "address";
+                // 2.正则验证
+                var regh = /^[\u4e00-\u9fa5]+$/i;
+                var regp = /^[1][3,4,5,7,8][0-9]{9}$/i;
+                // 2.1开始验证
+                if (!regh.test(receiver)) {
+                    this.$notify({
+                        title: "添加失败",
+                        message: "请输入您在中国使用的名字",
+                        type: "warning"
+                    });
+                    return;
+                }
+                if (!regh.test(province)) {
+                    this.$notify({
+                        title: "添加失败",
+                        message: "请输入正确省份",
+                        type: "warning"
+                    });
+                    return;
+                }
+                if (!regh.test(city)) {
+                    this.$notify({
+                        title: "添加失败",
+                        message: "请输入正确城市",
+                        type: "warning"
+                    });
+                    return;
+                }
+                if (!regh.test(county)) {
+                    this.$notify({
+                        title: "添加失败",
+                        message: "请输入正确归属县",
+                        type: "warning"
+                    });
+                    return;
+                }
+                if (!regh.test(address)) {
+                    this.$notify({
+                        title: "添加失败",
+                        message: "请输入正确地址",
+                        type: "warning"
+                    });
+                    return;
+                }
+                if (!regp.test(cellphone)) {
+                    this.$notify({
+                        title: "添加失败",
+                        message: "请输入正确手机号码",
+                        type: "warning"
+                    });
+                    return;
+                }
                 this.axios.get(url, {params: obj}).then(res =>{
                     if(res.data.code==-2){
                         this.$notify({
@@ -339,8 +393,10 @@
                             message: '这是一条成功的提示消息',
                             type: 'success'
                         });
+
                     }
                 })
+                this.loadMore();
 
             }
         },

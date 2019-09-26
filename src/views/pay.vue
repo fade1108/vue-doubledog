@@ -120,7 +120,7 @@
                                     <tr>
                                         <td>
 									        	<span class="goodName">
-													<img class="goodImg" src="../../src/assets/imgss/0ea0.jpg" />
+													<img class="goodImg" src="../../src/assets/imgss/cart2.jpg" />
 												</span>
                                             <span class="goodName goodsName">
 													<h2 class="goodname"></h2>
@@ -134,13 +134,13 @@
 													</p>
 												</span>
                                         </td>
-                                        <td class="goodPrice">￥344534.00</td>
-                                        <td class="goodNum">1</td>
+                                        <td class="goodPrice">￥19100.00</td>
+                                        <td class="goodNum"></td>
                                     </tr>
                                     <tr>
                                         <td>
 									        	<span class="goodName">
-													<img class="goodImg" src="../../src/assets/imgss/0ea0.jpg" />
+													<img class="goodImg" src="../../src/assets/imgss/cart2.jpg" />
 												</span>
                                             <span class="goodName goodsName">
 													<h2 class="goodname"></h2>
@@ -154,8 +154,8 @@
 													</p>
 												</span>
                                         </td>
-                                        <td class="goodPrice">￥344534.00</td>
-                                        <td class="goodNum">1</td>
+                                        <td class="goodPrice">￥16000.00</td>
+                                        <td class="goodNum"></td>
                                     </tr>
 
                                 </table>
@@ -205,13 +205,13 @@
             <div class="row totalRow">金额抵用：{{couponPrice | moneyFiler}}</div>
         </div>
         <div class="contenterFooter">
-            <p>1件商品，1项服务，总金额：<span class="footerPrice">￥9600.00</span></p>
+            <p>1件商品，1项服务，总金额：<span class="footerPrice">￥35100.00</span></p>
             <p>运费：<span class="footerPrice">￥100.00</span></p>
             <p>优惠：<span class="footerPrice footercouponPrice">{{couponPrice | moneyFiler}}</span></p>
         </div>
         <div class="clearfix"></div>
         <div class="row footerRow">
-            <span class="footerRowprice">应付金额：<span>￥9999.00</span></span>
+            <span class="footerRowprice">应付金额：<span>￥35000.00</span></span>
             <span class="footerRowaddress"><span>商品收获地址：{{moreaddressCity + moreaddressArea + moreaddressMinarea}}</span><span>{{moreaddressName}}</span><span>18347460829</span></span>
         </div>
         <button class="btn submitForm">提交订单</button>
@@ -370,7 +370,7 @@
                 var _this= this;
                 /*全选计算商品或服务数量*/
                 if(checkedAll == true){
-                    for( x in this.shopTableDatas){
+                    for(var  x in this.shopTableDatas){
                         this.shopTableDatas[x].checked = true;
                         if(this.shopTableDatas[x].type == "商品" ){
                             _this.goodsNum += 1;
@@ -379,7 +379,7 @@
                         }
                     }
                 }else{
-                    for( y in this.shopTableDatas){
+                    for(var  y in this.shopTableDatas){
                         this.shopTableDatas[y].checked = false;
                         this.goodsNum = 0;
                         this.serviceNum = 0;
@@ -464,11 +464,11 @@
             //设置为默认收货地址
             defultAddress:function(item){
                 var tem,index;
-                for(x in this.moreAddressData){
+                for(var x in this.moreAddressData){
                     this.moreAddressData[x].isShowDefult = false;
                 }
                 item.isShowDefult = true;
-                for(y in this.moreAddressData){
+                for(var y in this.moreAddressData){
                     if(this.moreAddressData[y].isShowDefult == true){
                         tem = this.moreAddressData[y];
                         index=y;
@@ -479,7 +479,7 @@
             },
             /*地址点击函数*/
             currentIndexClick:function(item,index){
-                for(x in this.moreAddressData){
+                for(var x in this.moreAddressData){
                     this.moreAddressData[x].addressDefult = false;
                 }
                 item.addressDefult = true;
@@ -510,11 +510,11 @@
                     this.newAddressShow = false;
                 }else if(this.edmitType == '修改'){
                     if(this.form.isShowDefult == true){
-                        for(x in this.moreAddressData){
+                        for(var x in this.moreAddressData){
                             this.moreAddressData[x].isShowDefult = false;
                         }
                         this.moreAddressData.splice(this.form.num,1,this.form);
-                        for(y in this.moreAddressData){
+                        for(var y in this.moreAddressData){
                             if(this.moreAddressData[y].isShowDefult == true){
                                 tem = this.moreAddressData[y];
                                 index=y;
@@ -564,7 +564,7 @@
                     this.limitNum = 1;
                     this.isTranShow = !this.isTranShow;
                     var tem,index;
-                    for(y in this.moreAddressData){
+                    for(var y in this.moreAddressData){
                         if(this.moreAddressData[y].addressDefult == true){
                             tem = this.moreAddressData[y];
                             index=y;

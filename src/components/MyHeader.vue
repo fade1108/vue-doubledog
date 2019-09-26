@@ -1,7 +1,7 @@
 <template>
 <header>
     <div id="body">
-        <div style="position: absolute;width: 100px;height: 100px;top: 0px;right: 0px;z-index: 999;background-color: #dcddde;">
+        <div style="position: absolute;width: 100px;height: 100px;top: 0px;right: 0px;z-index: 999;background-color:rgb(232, 232, 232);">
 
         <img src="../../src/assets/imgss/default.png">
             <p style="margin: 0px">用户名：TOM</p>
@@ -144,10 +144,10 @@ export default {
     #body { line-height: 1; font-size: 14px; font-family: "Microsoft Yahei"; color: #333; background-color: #ffffff; }
     .header{
         /*background-color: #2D2D2D;*/
-        background: -webkit-linear-gradient(#dcddde, #dcddde); /* Safari 5.1 - 6.0 */
-        background: -o-linear-gradient(#dcddde, #dcddde); /* Opera 11.1 - 12.0 */
-        background: -moz-linear-gradient(#dcddde, #dcddde); /* Firefox 3.6 - 15 */
-        background: linear-gradient(#dcddde, #dcddde); /* 标准的语法（必须放在最后） */
+        background: -webkit-linear-gradient(rgb(232, 232, 232), rgb(232, 232, 232)); /* Safari 5.1 - 6.0 */
+        background: -o-linear-gradient(rgb(232, 232, 232), rgb(232, 232, 232)); /* Opera 11.1 - 12.0 */
+        background: -moz-linear-gradient(rgb(232, 232, 232),rgb(232, 232, 232)); /* Firefox 3.6 - 15 */
+        background: linear-gradient(rgb(232, 232, 232), rgb(232, 232, 232)); /* 标准的语法（必须放在最后） */
 
     }
     ul, ol {

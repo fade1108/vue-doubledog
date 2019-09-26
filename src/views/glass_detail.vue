@@ -20,6 +20,11 @@
             <span>￥{{item.price}}</span>
           </div>
           <img :src="`http://127.0.0.1:3000/`+item.pic" class="w-100 group_img" />
+          <div class="animation">
+           <div class="introduce">
+            <p>RB4165F</p>
+           </div>
+          </div>
         </div>
       </div>
       <div class="row pl-2">
@@ -34,6 +39,7 @@
                 <span>¥{{item.price}}</span>
               </div>
               <img :src="`http://127.0.0.1:3000/`+item.pic" class="w-100" />
+         
             </div>
             <!-- <div class="col-md-6 p-0 pr-2">
               <div class="img-tip">
@@ -298,4 +304,50 @@ export default {
 .smOne_img_Etext {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
+/* 隐藏显示样式 */
+
+.animation{
+  transition: all .3s;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  position:absolute;
+  display: none;
+  position:absolute;
+  left: 0%;right: 1%;top: 0%;bottom: 0%;
+  background-color: rgb(191, 191, 191);
+  opacity:.5;
+}
+.img-group:hover>.animation{
+  display: block;
+}
+
+.introduce{
+transform:translateY(-100%);
+transition: all .3s;
+position: absolute;
+top: 50%;
+right: 0;
+left: 0;
+text-align: center;
+font-size: 14px;
+font-weight: 500;
+line-height: 2;
+letter-spacing: .2em;
+color: #fff;
+}
+.introduce p{
+ 
+  display: inline-block;
+  text-align: center;
+  border-bottom: 0 solid #fff;
+  color:rgb(249, 249, 249);
+  margin: 0;
+  padding: 0;
+  animation-delay:2s 
+}
+
 </style>
